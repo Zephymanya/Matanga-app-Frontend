@@ -1,0 +1,32 @@
+.contentFooter {
+  background-color: rgba(0, 12, 25, 1);
+  text-align: center;
+}
+.footerLogo {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.footerLink {
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+}
+
+.footerIcons {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.icons {
+  display: flex;
+  gap: 25%;
+}
+
+.copyright {
+  display: flex;
+}
+.colorMatanga {
+  color: rgba(255, 142, 0, 1);
+}
