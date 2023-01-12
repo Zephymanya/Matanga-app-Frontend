@@ -36,6 +36,7 @@ a {
   padding-bottom: 0.5%;
   align-items: center;
   background-color: rgba(0, 12, 25, 1);
+  position: sticky;
 }
 
 .contentLink {
