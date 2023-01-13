@@ -1,11 +1,11 @@
-function Home() 
-{
-  const component =
-  <>
-    
-  </>
+function Home() {
+  const component = (
+    <>
+      <h1 style={{ color: "white" }}>Bonjour les gar</h1>
+    </>
+  );
 
-  return component
+  return component;
 }
 
-export default Home
+export default Home;
