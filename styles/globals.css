@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -Poppins, sans-serif;
 }
 
 a {
@@ -15,68 +13,41 @@ a {
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #ffffff;
+  --orange_c: #ff8e00;
+  --orange_f: #FF5003;
+  --bleu_c : #3EA3D9; 
+  --bleu_f : #000C19; 
+  --bleu_f_9 :rgba(0, 12, 25, 0.9); 
+  --bleu_f_8 : rgba(0, 12, 25, 0.8);
+  --bleu_f_7 : rgba(0, 12, 25, 0.7);
+  --bleu_f_6 :rgba(0, 12, 25, 0.6);
+  --bleu_f_5 : rgba(0, 12, 25, 0.5);
+  --bleu_f_2 : rgba(0, 48, 73, 1);
+
+  --blanc : #FFFFFF;
+  --blanc_4 : rgba(255, 255, 255, 0.4);
+  --blanc_9 : rgba(255, 255, 255, 0.9);
+  --blanc_8 : rgba(255, 255, 255, 0.8);
+  --blanc_7 : rgba(255, 255, 255, 0.7);
+  --blanc_6 : rgba(255, 255, 255, 0.6);
+  --blanc_5 : rgba(255, 255, 255, 0.5);
+  --blanc_3 : rgba(255, 255, 255, 0.3);
+
+  --noir_4 : rgba(0, 0, 0, 0.4);
+  --noir_3 : rgba(0, 0, 0, 0.3);
+  --noir_2 : rgba(0, 0, 0, 0.2);
+  
+
+  
+   
+
+
+}
+
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+  :root {
+    --bg-color: #000000;
   }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-/* $$$$$$$$$$$$$$$$$ Component Header */
-
-.contentHeader {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 3%;
-  padding-left: 3%;
-  padding-top: 0.5%;
-  padding-bottom: 0.5%;
-  align-items: center;
-  background-color: rgba(0, 12, 25, 1);
-  position: sticky;
-}
-
-.contentLink {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  gap: 4%;
-}
-
-.contentButton {
-  display: flex;
-  gap: 5%;
-}
-
-p {
-  font-size: small;
-  color: white;
-}
-h1 {
-  font-size: smaller;
-  color: white;
-}
-
-button {
-  padding: 4%;
-  border-radius: 5px;
-  border: none;
-}
-
-.btnConnexion {
-  background-color: rgba(255, 142, 0, 1);
-  color: white;
-}
-
-.btnInscription {
-  background-color: rgba(0, 12, 25, 1);
-  color: white;
-  border: 1px solid white;
-}
-
-.contentButton {
-  padding-right: 1.5%;
 }
