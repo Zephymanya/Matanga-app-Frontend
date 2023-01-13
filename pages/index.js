@@ -1,3 +1,11 @@
-export default function Home() {
-  return <div></div>;
+function Home() 
+{
+  const component =
+  <>
+    
+  </>
+
+  return component
 }
+
+export default Home

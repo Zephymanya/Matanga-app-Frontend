@@ -1,5 +1,36 @@
+
+
+:root {
+  --bg-color: #ffffff;
+  --orange_c: #ff8e00;
+  --orange_f: #FF5003;
+  --blue_c : #3EA3D9; 
+  --blue_f : #000C19; 
+  --blue_f_9 :rgba(0, 12, 25, 0.9); 
+  --blue_f_8 : rgba(0, 12, 25, 0.8);
+  --blue_f_7 : rgba(0, 12, 25, 0.7);
+  --blue_f_6 :rgba(0, 12, 25, 0.6);
+  --blue_f_5 : rgba(0, 12, 25, 0.5);
+  --blue_f_2 : rgba(0, 48, 73, 1);
+
+  --white : #FFFFFF;
+  --white_4 : rgba(255, 255, 255, .4);
+  --white_9 : rgba(255, 255, 255, .9);
+  --white_8 : rgba(255, 255, 255, .8);
+  --white_7 : rgba(255, 255, 255, .7);
+  --white_6 : rgba(255, 255, 255, .6);
+  --white_5 : rgba(255, 255, 255, .5);
+  --white_3 : rgba(255, 255, 255, .3);
+
+  --black_4 : rgba(0, 0, 0, 0.4);
+  --black_3 : rgba(0, 0, 0, 0.3);
+  --black_2 : rgba(0, 0, 0, 0.2);
+}
+
+
 html,
 body {
+  background-color: #000C19;
   padding: 0;
   margin: 0;
 }
@@ -11,39 +42,6 @@ a {
 
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --bg-color: #ffffff;
-  --orange_c: #ff8e00;
-  --orange_f: #FF5003;
-  --bleu_c : #3EA3D9; 
-  --bleu_f : #000C19; 
-  --bleu_f_9 :rgba(0, 12, 25, 0.9); 
-  --bleu_f_8 : rgba(0, 12, 25, 0.8);
-  --bleu_f_7 : rgba(0, 12, 25, 0.7);
-  --bleu_f_6 :rgba(0, 12, 25, 0.6);
-  --bleu_f_5 : rgba(0, 12, 25, 0.5);
-  --bleu_f_2 : rgba(0, 48, 73, 1);
-
-  --blanc : #FFFFFF;
-  --blanc_4 : rgba(255, 255, 255, 0.4);
-  --blanc_9 : rgba(255, 255, 255, 0.9);
-  --blanc_8 : rgba(255, 255, 255, 0.8);
-  --blanc_7 : rgba(255, 255, 255, 0.7);
-  --blanc_6 : rgba(255, 255, 255, 0.6);
-  --blanc_5 : rgba(255, 255, 255, 0.5);
-  --blanc_3 : rgba(255, 255, 255, 0.3);
-
-  --noir_4 : rgba(0, 0, 0, 0.4);
-  --noir_3 : rgba(0, 0, 0, 0.3);
-  --noir_2 : rgba(0, 0, 0, 0.2);
-  
-
-  
-   
-
-
 }
 
 @media (prefers-color-scheme: dark) {
