@@ -1,0 +1,397 @@
+.Home
+{
+    
+}
+
+.Home .header 
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home .header .filter
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--blue_f_7);
+    width: 100%;
+    height: 100vh;
+
+    z-index: 2;
+}
+
+.Home .header .textes_and_btn
+{
+    position: relative;
+
+    text-align: center;
+    padding: 0 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 3;
+}
+
+.Home .header .textes_and_btn strong
+{
+    color: var(--white_9);
+    font-weight: normal;
+    font-size: 35px;
+    text-shadow: 0 2px 4px var(--black_4);
+}
+
+.Home .header .textes_and_btn span
+{
+    color: var(--white_7);
+    font-size: 18px;
+    text-shadow: 0 2px 4px var(--black_4);
+    margin-top: 10px;
+}
+
+.Home .header .textes_and_btn .btn
+{
+    border: 1px solid var(--orange_c);
+    background-color: var(--orange_c);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: var(--white_9);
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.Home .header .btn_arrow_down
+{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    font-size: 35px;
+    color: var(--white_4);
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+
+    z-index: 3;
+}
+.Home .header .btn_arrow_down:hover
+{
+    color: var(--white_9);
+}
+
+
+.About
+{
+    padding: 50px 5%;
+
+}
+
+.About .title_page
+{
+    font-size: 23px;
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.About .title_page
+{
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.About .title_page i
+{
+    background-color: var(--orange_c);
+    width: 40px;
+    height: 2.4px;
+    border-radius: 10px;
+    margin-top: 5px;
+
+    display: inline-block;
+}
+
+
+.About .textes_and_image
+{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.About .textes_and_image .bloc_img
+{
+    position: relative;
+    min-width: calc(350px + (20px * 2));
+    height: calc(250px + (20px * 2));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.About .textes_and_image .bloc_img .img_bloc_color_1
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--blue_c);
+    width: 150px;
+    height: 100px;
+}
+
+.About .textes_and_image .bloc_img .img
+{
+    position: relative;
+    width: 350px;
+    height: 250px;
+
+    z-index: 2;
+}
+
+.About .textes_and_image .bloc_img .img_bloc_color_2
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background-color: var(--blue_f);
+    width: 150px;
+    height: 100px;
+}
+
+
+.About .textes_and_image .textes_and_btn
+{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.About .textes_and_image .textes_and_btn p
+{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: right;
+}
+
+.About .textes_and_image .textes_and_btn .btn
+{
+    background-color: var(--orange_c);
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: var(--white);
+    margin-top: 20px;
+    font-size: 14px;
+
+    transition: .3s ease-in-out;
+}
+.About .textes_and_image .textes_and_btn .btn:hover
+{
+    background-color: var(--blue_f);
+    color: var(--orange_c);
+}
+
+
+.MapBloc
+{
+    position: relative;
+    width: 100%;
+}
+
+.MapBloc .myMap
+{
+    border: none;
+    width: 100%;
+    height: 300px;
+
+    z-index: 1;
+}
+
+.MapBloc .bloc_textes
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--blue_f_7);
+    width: 400px;
+    height: 300px;
+    border-radius: 5px 0 0 5px;
+    transform: translateX(0);
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s ease-in-out;
+
+    z-index: 2;
+}
+.MapBloc .show_text_bloc
+{
+    transform: translateX(100%);
+}
+
+.MapBloc .bloc_textes .btn
+{
+    position: absolute;
+    left: -30px;
+    top: 50%;
+
+    border: none;
+    background-color: var(--blue_f_7);
+    color: var(--white_8);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s ease-in-out;
+}
+.MapBloc .bloc_textes .btn:hover
+{
+    color: var(--white);
+}
+
+.MapBloc .bloc_textes .btn .icon
+{
+    transform: rotate(0deg);
+
+    transition: .3s ease-in-out;
+}
+.MapBloc .bloc_textes .btn .icon_active 
+{
+    transform: rotate(180deg);
+}
+
+.MapBloc .bloc_textes .texte 
+{
+    color: var(--white_8);
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.MapBloc .bloc_textes .texte .icon
+{
+    color: var(--orange_c);
+    font-size: 23px;
+}
+
+.MapBloc .bloc_textes .texte p
+{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+.animation
+{
+    animation: animation .8s cubic-bezier(.5, 0, 0, 1);
+    visibility: visible;
+    opacity: 1;
+}
+@keyframes animation 
+{
+    from{
+        transform: translateY(50px);
+        visibility: hidden;
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+/** MEDIA QUERY **/
+    /**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+    .About .textes_and_image
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .About .textes_and_image .bloc_img
+    {
+        position: relative;
+        min-width: calc(300px + (20px * 2));
+        height: calc(200px + (20px * 2));
+    }
+
+    .About .textes_and_image .bloc_img .img
+    {
+        width: 300px;
+        height: 200px;
+    }
+
+    .About .textes_and_image .textes_and_btn
+    {
+        width: 100%;
+        margin-top: 30px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .About .textes_and_image .textes_and_btn p
+    {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 771px) 
+{
+    .MapBloc .bloc_textes
+    {
+        width: calc(100% - 45px);
+    }
+}
+    /**-- #FIN Ecran(<991px) --**/
