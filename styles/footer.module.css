@@ -4,7 +4,7 @@ footer .logo {
 }
 
 .contentPrincip {
-  border: 1px solid white;
+  background-color: var(--blue_f);
   padding-top: 3%;
   padding-bottom: 3%;
 }
