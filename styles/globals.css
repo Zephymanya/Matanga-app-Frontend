@@ -7,12 +7,12 @@
   --blue_c : #3EA3D9; 
   --blue_f : #000C19; 
   --blue_f-menu : #021325; 
-  --blue_f_9 :rgba(0, 12, 25, 0.9); 
-  --blue_f_8 : rgba(0, 12, 25, 0.8);
-  --blue_f_7 : rgba(0, 12, 25, 0.7);
-  --blue_f_6 :rgba(0, 12, 25, 0.6);
-  --blue_f_5 : rgba(0, 12, 25, 0.5);
-  --blue_f_2 : rgba(0, 48, 73, 1);
+  --blue_f_9 : rgba(0, 12, 25, .9); 
+  --blue_f_8 : rgba(0, 12, 25, .8);
+  --blue_f_7 : rgba(0, 12, 25, .7);
+  --blue_f_6 : rgba(0, 12, 25, .6);
+  --blue_f_5 : rgba(0, 12, 25, .5);
+  --blue_f_2 : rgba(0, 12, 25, .2);
 
   --white : #FFFFFF;
   --white_4 : rgba(255, 255, 255, .4);
