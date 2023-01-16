@@ -6,12 +6,177 @@
 
 .cimetTitle {
   padding-top: 5%;
-  padding-bottom: 0%;
+  color: var(--blue_f);
 }
 
 .cimetBarr {
   width: 40px;
   height: 2px;
   border: 1px solid var(--orange_c);
+  margin-top: -0.5%;
+}
+
+.ContentInputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.inputCherCimet ::placeholder {
+  color: black;
+}
+.inputCherCimet {
+  width: 472px;
+  height: 40px;
+  border: 2px solid var(--blackç_015);
+  border-radius: 5px;
+  outline: none;
+  color: var(--blue_f);
+}
+
+.selectCimetier {
+  width: 262px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--blackç_015);
+  background-color: var(--white);
+}
+
+.selectCimetier option {
+  color: var(--blue_f);
+}
+
+.btnCimet {
+  width: 106px;
+  height: 40px;
+  background-color: var(--blue_f);
+  color: var(--orange_c);
+  border-radius: 5px;
+  border: none;
+}
+
+/* Carde Styles **************************** */
+
+.contentCardCimet {
+  border-radius: 5px;
+  border: 2px solid;
+  border: 2px solid var(--blackç_015);
+  width: 380px !important;
+  height: 507px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContentPrincipCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 74px;
+  padding-bottom: 3%;
+}
+
+.titleContentCimet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleContentCimet .CardTitle {
+  font: size 18px;
+  font-weight: 600;
+  color: var(--blue_f);
+}
+
+.titleContentCimet .lieuCimet {
+  margin-top: -6%;
+  color: var(--orange_c);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.CardImage {
+  width: 330px !important;
+  height: 200.73px !important;
+}
+
+.ImageCardk {
+  width: 330px !important;
+  height: 200.73px !important;
+  border-radius: 10px !important;
+}
+
+.textCard {
+  width: 330px;
+  height: 140px;
+}
+
+.textCard p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--blue_f);
+}
+
+.btnArr {
+  padding-bottom: 10px;
+}
+.voirPlus {
+  width: 100px;
+  height: 35px;
+  background-color: var(--white);
+  color: var(--blue_f);
+  border: 2px solid var(--orange_c);
+  border-radius: 5px;
+}
+
+/* ******************************************* */
+
+.vuDefunt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vuDefunt p {
+  width: 100%;
+}
+
+.btnVplusT {
+  width: 98px;
+  height: 35px;
+  border: 2px solid var(--blue_f);
+  color: var(--blue_f);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.progresseBar {
+  background-color: var(--black_2);
+  height: 3px;
+  width: 180px;
   margin-top: -1%;
+  margin-bottom: 1%;
+}
+
+.timeLine {
+  background-color: var(--orange_c);
+  height: 3px;
+  width: 60px;
+}
+
+.btnVplusGeneral {
+  padding-bottom: 50px;
+}
+
+.btnVplusT {
+  width: 98px;
+  height: 35px;
+  border-radius: 5px;
+  border: 2px solid var(--blue_f);
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--white);
 }
