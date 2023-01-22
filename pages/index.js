@@ -154,6 +154,13 @@ function Home()
         </button>
       </div>
     </div>
+
+    <div className={styles.Deceased_person}>
+      <h2 className={styles.title_page}>
+        <span>Personnes récement décédées</span>
+        <i></i>
+      </h2>
+    </div>
   </div>
 
   return component

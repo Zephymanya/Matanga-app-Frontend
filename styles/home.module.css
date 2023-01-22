@@ -90,13 +90,7 @@
 }
 
 
-.About
-{
-    padding: 50px 5%;
-
-}
-
-.About .title_page
+.title_page
 {
     font-size: 23px;
     font-weight: 500;
@@ -106,14 +100,14 @@
     align-items: center;
 }
 
-.About .title_page
+.title_page
 {
     margin: 0;
     margin-bottom: 25px;
     padding: 0;
 }
 
-.About .title_page i
+.title_page i
 {
     background-color: var(--orange_c);
     width: 40px;
@@ -124,6 +118,12 @@
     display: inline-block;
 }
 
+.About,
+.Deceased_person
+{
+    padding: 50px 5%;
+
+}
 
 .About .textes_and_image
 {
@@ -320,7 +320,7 @@
 
 .animation
 {
-    animation: animation .8s cubic-bezier(.5, 0, 0, 1);
+    animation: animation 1s cubic-bezier(.5, 0, 0, 1);
     visibility: visible;
     opacity: 1;
 }
