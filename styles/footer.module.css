@@ -1,0 +1,60 @@
+footer .logo {
+  width: 50px;
+  height: 50px;
+}
+
+.contentPrincip {
+  background-color: var(--blue_f);
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+footer .contentImageFooter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  color: var(--white_6);
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+footer .lastLine {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+footer .lastLine .contentIcons {
+  display: flex;
+  gap: 15%;
+}
+
+.icons {
+  width: 25px;
+  height: 25px;
+  color: var(--white_6);
+}
+
+footer .lastTexte p {
+  color: var(--white_6);
+}
+
+footer .lastLine .lastTexte .textMatanga {
+  color: var(--orange_c);
+}
+
+footer .lastLine .lastTexte .flyts {
+  color: var(--blue_c);
+}
+
+footer .lastLine .lastTexte .mayembe {
+  color: var(--blue_c);
+}

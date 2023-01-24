@@ -1,0 +1,116 @@
+.contact_content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
+
+.contact {
+  width: 1288px !important;
+  height: 478px !important;
+  background-color: var(--blue_f);
+  border-radius: 5px;
+}
+
+.contentTitleCont {
+  width: 100%;
+  text-align: center;
+}
+
+.TitleContact {
+  width: 100%;
+  font-size: 25px;
+  color: var(--white_9);
+  font-weight: 600;
+}
+
+.contectInputText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -3%;
+}
+
+.paragraphe {
+  color: var(--white_6);
+  size: 15px;
+}
+
+.contentAdresse {
+  width: 331.67px;
+  height: 114px;
+  margin-top: -14.4%;
+}
+
+.contentAdresse .paragraphe {
+  width: 200px;
+  height: 114px;
+  border: 1px solid wh;
+}
+
+.contact_phone {
+  margin-top: -14.4%;
+  width: 331.67px;
+  height: 114px;
+}
+
+.content_input_contact {
+  margin-top: 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 498.52px;
+  height: 335px;
+}
+
+.content_input_contact input {
+  width: 498.52px;
+  height: 35px;
+  background-color: var(--blue_f);
+  border: 2px solid var(--white_3);
+  border-radius: 5px;
+  color: var(--white_6);
+  outline: none;
+}
+
+.content_input_contact input ::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white_6);
+}
+
+.content_input_contact textarea {
+  width: 498.52px;
+  height: 127px;
+  background-color: var(--blue_f);
+  border: 2px solid var(--white_3);
+  border-radius: 5px;
+  color: var(--white_6);
+  outline: none;
+}
+
+.btn_nvoi_input {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_envoi {
+  width: 101.74px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: var(--orange_c);
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.title_column {
+  color: var(--orange_c);
+  font-size: 20px;
+  font-weight: 500;
+}

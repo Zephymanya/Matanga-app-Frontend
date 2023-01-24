@@ -1,0 +1,365 @@
+.contentGlobale {
+  position: relative;
+}
+
+.contentCimet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cimetTitle {
+  padding-top: 5%;
+  color: var(--blue_f);
+}
+
+.cimetBarr {
+  width: 40px;
+  height: 2px;
+  border: 1px solid var(--orange_c);
+  margin-top: -0.5%;
+}
+
+.ContentInputs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.inputCherCimet ::placeholder {
+  color: black;
+}
+.inputCherCimet {
+  width: 472px;
+  height: 40px;
+  border: 2px solid var(--blackç_015);
+  border-radius: 5px;
+  outline: none;
+  color: var(--blue_f);
+}
+
+.selectCimetier {
+  width: 262px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--blackç_015);
+  background-color: var(--white);
+}
+
+.selectCimetier option {
+  color: var(--blue_f);
+}
+
+.btnCimet {
+  width: 106px;
+  height: 40px;
+  background-color: var(--blue_f);
+  color: var(--orange_c);
+  border-radius: 5px;
+  border: none;
+}
+
+.content_btnModal {
+  margin-left: 15%;
+  width: 39px;
+  height: 39px;
+  border-radius: 25px;
+  background-color: var(--blue_f);
+}
+
+/************************* card style */
+/* ************************** */
+
+.contentCardCimet {
+  border-radius: 5px;
+  border: 2px solid;
+  border: 2px solid var(--blackç_015);
+  width: 380px !important;
+  height: 507px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ContentPrincipCard {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 74px;
+  padding-bottom: 3%;
+}
+
+.titleContentCimet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleContentCimet .CardTitle {
+  font: size 18px;
+  font-weight: 600;
+  color: var(--blue_f);
+}
+
+.titleContentCimet .lieuCimet {
+  margin-top: -6%;
+  color: var(--orange_c);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.CardImage {
+  width: 330px !important;
+  height: 200.73px !important;
+}
+
+.ImageCardk {
+  width: 330px !important;
+  height: 200.73px !important;
+  border-radius: 10px !important;
+}
+
+.textCard {
+  width: 330px;
+  height: 140px;
+}
+
+.textCard p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--blue_f);
+}
+
+.btnArr {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20%;
+
+  padding-bottom: 10px;
+}
+.voirPlus {
+  width: 100px;
+  height: 35px;
+  background-color: var(--white);
+  color: var(--blue_f);
+  border: 2px solid var(--orange_c);
+  border-radius: 5px;
+}
+
+.voirPlus1 {
+  width: 100px;
+  height: 35px;
+  background-color: var(--blue_f);
+  color: var(--orange_c);
+  border: none;
+  border-radius: 5px;
+}
+
+/* ******************************************* */
+
+.vuDefunt {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vuDefunt p {
+  width: 100%;
+}
+
+.progresseBar {
+  background-color: var(--black_2);
+  height: 3px;
+  width: 180px;
+  margin-top: -1%;
+  margin-bottom: 50px;
+}
+
+.timeLine {
+  background-color: var(--orange_c);
+  height: 3px;
+  width: 60px;
+}
+
+/* *************Style Modale ************ */
+
+.btnChowMadal {
+  font-size: 40px;
+  color: var(--orange_c);
+}
+
+.modale {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center;
+  margin-top: -103%;
+  position: absolute;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+.contentModale {
+  width: 864px;
+  height: 1302px;
+  background-color: var(--white);
+  z-index: 100;
+}
+
+/* Content style Modal */
+
+.head_modal {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.head_modal_title {
+  font-size: 25px;
+  font-weight: 500;
+}
+.head_close_modale {
+  width: 37px;
+  height: 37px;
+
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 7px 2px #888888;
+}
+
+.btn_close_modale {
+  color: var(--orange_c);
+  font-size: 25px;
+}
+
+.input_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input_image input[type="file"] {
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  z-index: 2;
+  opacity: 0%;
+}
+
+.imgFromInput {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+
+.form_identite_defunt {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.line1 {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.line1 .name_input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 19px;
+}
+
+.line1 label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.line1 input {
+  width: 248px;
+  height: 50px;
+  border: 2px solid var(--black_2);
+  border-radius: 5px;
+}
+
+.line2 {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.line2 label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.line2 input {
+  width: 385px;
+  height: 50px;
+  border: 2px solid var(--black_2);
+  border-radius: 5px;
+}
+
+.content_line2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.line3 {
+  width: 100%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.line3 input {
+  width: 385px;
+  height: 50px;
+  border: 2px solid var(--black_2);
+  border-radius: 5px;
+}
+
+.line3 select {
+  width: 385px;
+  height: 50px;
+  border: 2px solid var(--black_2);
+  border-radius: 5px;
+  background-color: var(--white);
+}
+
+.maison_f {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.select_option {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
