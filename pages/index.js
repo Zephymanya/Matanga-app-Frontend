@@ -12,6 +12,9 @@ import {
 import { BsFillPhoneFill } from "react-icons/bs"
 import { useRef, useEffect, useState } from "react"
 import matanga from "../public/img/matanga-image.jpg"
+import Cart_defunt from "../components/partials/_Cart_defunt"
+import Slider from "../components/partials/_Slider"
+
 
 function Home() 
 {
@@ -52,6 +55,7 @@ function Home()
   const [leftAnimation, setLeftAnimation] = useState(),
         [showTextBloc, setShowTextBloc] = useState(false)
 
+  const tab = [1, 2, 3, 4, 5]
 
   const component =
   <div className={styles.Home}>
@@ -84,7 +88,7 @@ function Home()
 
     <div id="About" ref={refAbout} className={styles.About}>
       <h2 className={styles.title_page}>
-        <span>Qui somme nous?</span>
+        <span>Qui sommes nous?</span>
         <i></i>
       </h2>
 
@@ -152,6 +156,17 @@ function Home()
         <button className={`${styles.btn}`} onClick={handleShowTexteBloc}>
           <MdOutlineArrowForwardIos className={`${styles.icon} ${showTextBloc ? styles.icon_active : null}`}/>
         </button>
+      </div>
+    </div>
+
+    <div className={styles.Deceased_person}>
+      <h2 className={styles.title_page}>
+        <span>Personnes récement décédées</span>
+        <i></i>
+      </h2>
+
+      <div>
+        <Slider tab={tab} />
       </div>
     </div>
   </div>
