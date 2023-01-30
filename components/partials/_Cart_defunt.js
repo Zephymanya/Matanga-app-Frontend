@@ -3,7 +3,7 @@ import styles from "../../styles/partials/_cart_defunt.module.css"
 import defunt from "../../public/img/defunt.jpg"
 import Link from "next/link";
 
-function Cart_defunt() 
+function Cart_defunt({modify}) 
 {
   const component = (
     <div className={styles.Cart}>
@@ -39,8 +39,15 @@ function Cart_defunt()
             </p>
         </div>
 
-        <div className={styles.btns}>
+        <div className={`${styles.btns} ${modify ? styles.modify : null}`}>
             <Link href={""} className={styles.btn_link}>Voir plus</Link>
+
+            {
+                modify 
+                ?
+                    <button className={styles.btn_edit}>Modifier</button>
+                : null
+            }
         </div>
     </div>
   );

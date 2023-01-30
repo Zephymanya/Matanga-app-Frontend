@@ -15,6 +15,10 @@ export const rooter = {
         name: "Nous contacter",
         link: "/contact"
     },
+    privacy_policy: {
+        name: "Politique de confidentialité",
+        link: "/politique-de-confidentialite"
+    },
     login: {
         name: "Connexion",
         link: "/connexion"
@@ -22,5 +26,13 @@ export const rooter = {
     register: {
         name: "Inscription",
         link: "/inscription"
+    },
+    samy: {
+        name: "FlyTs",
+        link: "https://samytshibanda.com/"
+    },
+    manya: {
+        name: "Manya",
+        link: "/"
     }
 }

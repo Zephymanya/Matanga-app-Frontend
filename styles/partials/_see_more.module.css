@@ -1,0 +1,52 @@
+.Voir_plus
+{
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+    font-size: 14px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Voir_plus .Chargement
+{
+	background-color: var(--black_2);
+	height: 2px;
+	width: 150px; 
+	border-radius: 3px;
+
+	margin-top: 5px;
+}
+.Voir_plus .Chargement .int
+{
+	background-color: var(--orange_c);
+	height: 100%;
+	width: 0%; 
+	border-radius: 3px;
+}
+
+.Voir_plus button
+{
+	border: 2px solid var(--blue_f);
+	background: none;
+	padding: 8px 15px;
+	color: var(--blue_f);
+	font-weight: 500;
+	text-transform: lowercase;
+	border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+
+	margin-top: 15px;
+	
+	transition: .3s ease-in-out;
+}
+.Voir_plus button:hover
+{
+	border: 2px solid var(--blue_f);
+	background-color: var(--blue_f);
+	color: var(--orange_c);
+}

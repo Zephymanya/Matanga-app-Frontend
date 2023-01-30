@@ -1,212 +1,30 @@
-import Image from "next/image";
-import React from "react";
-import styles from "../styles/cimetiere.module.css";
-import mortFemme from "../public/img/femmEM.jpg";
+import CardsList from "../components/partials/_CardsList"
+import SeeMore from "../components/partials/_SeeMore"
+import SortingSystem from "../components/partials/_SortingSystem"
+import styles from "../styles/cimetiere.module.css"
 
 
-const cimetiere = () => {
-  const renduCimetiere = (
-    <>
-      <div className={styles.contentCimet}>
-        <h1 className={styles.cimetTitle}>Notre cimetière</h1>
-        <hr className={styles.cimetBarr} />
-      </div>
+function cimetiere ()
+{
+  const tab = [1, 2, 3, 4 ,5 ,6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
-      <div className={styles.ContentInputs}>
-        <input
-          type={"text"}
-          className={styles.inputCherCimet}
-          placeholder="Qui cherchez-vous?"
-        />
+  const component = 
+  <>
+    <div className={styles.Cimetiere}>
+      <h2 className={styles.title_page}>
+        <span>Notre cimetière</span>
+        <i></i>
+      </h2>
 
-        <select className={styles.selectCimetier}>
-          <option valeur="fr"> Choisissez le cimetière</option>
-          <option valeur="nl">Gombe</option>
-          <option valeur="en">Necropol</option>
-          <option valeur="other">Mbeseke</option>
-        </select>
+      <SortingSystem addBtn={false}/>
 
-        <div>
-          <button className={styles.btnCimet}>Chercher</button>
-        </div>
-      </div>
+      <CardsList tab={tab}/>
 
-      {/* SECTION CARDE MORT AUX CIMETIERES */}
-      <div className={styles.ContentPrincipCard}>
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
+      <SeeMore tab={tab} text={"défunt"} total={15} />
+    </div>
+  </>
 
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
+  return component
+}
 
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-        {/* Carde 1*********************************** */}
-      </div>
-
-      <div className={styles.vuDefunt}>
-        <div>
-          <p>Vous avez vu 12 défunts sur 23</p>
-        </div>
-
-        <div className={styles.progresseBar}>
-          <div className={styles.timeLine}></div>
-        </div>
-
-        <div className={styles.btnVplusGeneral}>
-          <button className={styles.btnVplusT}>Voir plus</button>
-        </div>
-      </div>
-    </>
-  );
-
-  return renduCimetiere;
-};
-
-export default cimetiere;
+export default cimetiere

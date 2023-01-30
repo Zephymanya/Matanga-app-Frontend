@@ -8,7 +8,7 @@
 }
 .Cart:hover
 {
-    box-shadow: 0 0 4px 3px var(--black_015);
+    border: 1px solid var(--orange_c);
 }
 
 
@@ -72,12 +72,19 @@
     justify-content: center;
 }
 
+.Cart .modify
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .Cart .btns .btn_link
 {
-    border: 1px solid var(--orange_c);
+    border: 2px solid var(--orange_c);
 
     background: none;
-    padding: 8px 15px;
+    padding: 6px 10px;
     border-radius: 5px;
     color: var(--blue_f);
     margin-top: 15px;
@@ -89,7 +96,29 @@
 }
 .Cart .btns .btn_link:hover
 {
-    border: 1px solid var(--orange_c);
+    border: 2px solid var(--orange_c);
     background-color: var(--orange_c);
-    color: var(--white);
+    color: var(--blue_f);
+}
+
+.Cart .btns .btn_edit
+{
+    border: 2px solid var(--blue_f);
+
+    background: var(--blue_f);
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: var(--orange_c);
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+}
+.Cart .btns .btn_edit:hover
+{
+    border: 2px solid var(--blue_f);
+    background: none;
+    color: var(--blue_f);
 }
