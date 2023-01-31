@@ -1,0 +1,44 @@
+.List
+{
+    width: 100%;
+    margin: 40px 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+
+
+
+
+
+
+
+/**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+    .List
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/**-- Ecran(<771px) --**/
+@media all and (max-width: 771px) 
+{  
+    .List
+    {
+        grid-template-columns: repeat(1, 1fr);
+    } 
+}
+
+
+/**-- Ecran(<1500px) --**/
+@media all and (min-width: 1500px) 
+{    
+    #banner
+    {
+        padding: 0 19.5%;
+    }
+}

@@ -3,44 +3,50 @@ import logo from "../public/favicon.ico";
 import Image from "next/image";
 import { rooter } from "../datas/web";
 import Link from "next/link";
-import { BsFacebook } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+import { BsTwitter, BsInstagram } from "react-icons/bs";
 
 function Footer() {
   const component = (
     <>
-      <footer className={styles.contentPrincip} >
+      <footer className={styles.Footer}>
+        <Image src={logo} alt={"Logo Matanga"} className={styles.logo}/>
 
-        <div className={styles.contentImageFooter}>
-          <Image src={logo} alt="logo" className={styles.logo} />
-        </div>
         <div className={styles.links}>
-          <Link href={rooter.cimetiere.link} className={styles.link}>
-            {rooter.cimetiere.name}
-          </Link>
-          <Link href={rooter.about.link} className={styles.link}>
-            {rooter.about.name}
-          </Link>
-          <Link href={rooter.contact.link} className={styles.link}>
-            {rooter.contact.name}
-          </Link>
+          <Link href={rooter.cimetiere.link} className={styles.link}>{rooter.cimetiere.name}</Link>
+          <Link href={rooter.about.link} className={styles.link}>{rooter.about.name}</Link>
+          <Link href={rooter.contact.link} className={styles.link}>{rooter.contact.name}</Link>
+          <Link href={rooter.privacy_policy.link} className={styles.link}>{rooter.privacy_policy.name}</Link>
         </div>
 
-        <div className={styles.lastLine}>
-          <div className={styles.contentIcons}>
-            <BsFacebook className={styles.icons} />
-            <BsTwitter className={styles.icons} />
-            <BsInstagram className={styles.icons} />
+        <div className={styles.bottom}>
+          <div className={styles.socials_btn}>
+            <Link href={""}>
+              <FaFacebookF  className={styles.social}/>
+            </Link>
+
+            <Link href={""}>
+              <BsTwitter   className={styles.social}/>
+            </Link>
+            
+            <Link href={""}>
+              <BsInstagram className={styles.social}/>
+            </Link>
           </div>
 
-          <div className={styles.lastTexte}>
-            <p>
-              ©2022<span className={styles.textMatanga}> Matanga.</span>Designer & développer par
-              <span className={styles.flyts} > Flyts </span>&<span className={styles.mayembe}>Mayembe</span>
-            </p>
+          <div className={styles.txt}>
+            ©2022 
+            <span className={styles.matanga_color}>
+              Matanga
+            </span>. 
+            Designer & développer par 
+            <Link href={rooter.samy.link} target={"_blank"} className={styles.developper}> 
+              {rooter.samy.name}
+            </Link> & 
+            <Link href={rooter.manya.link} target={"_blank"} className={styles.developper}>
+              {rooter.manya.name}
+            </Link>
           </div>
-          
         </div>
       </footer>
     </>
