@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "../../styles/partials/_card_list.module.css";
+import Cart_defunt from "./_Cart_defunt";
 import dynamic from "next/dynamic";
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import Cart_defunt from "./_Cart_defunt";
 
 var $ = require("jquery");
 if (typeof window !== "undefined") {
@@ -13,7 +14,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
 
-function Slider({ tab }) {
+function Card_list({ tab }) {
   const owl_options = {
     margin: 30,
     autoplay: true,
@@ -52,7 +53,8 @@ function Slider({ tab }) {
       </OwlCarousel>
     </>
   );
+
   return component;
 }
 
-export default Slider;
+export default Card_list;

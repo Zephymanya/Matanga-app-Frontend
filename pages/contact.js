@@ -10,7 +10,7 @@ const contact = () => {
             <p className={styles.TitleContact}>Contact</p>
           </div>
 
-          <div className={styles.contectInputText}>
+          <div className={styles.contentInputText}>
             <div className={styles.contentAdresse}>
               <p className={styles.title_column}>ADRESSE</p>
               <p className={styles.paragraphe}>

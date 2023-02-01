@@ -13,6 +13,8 @@
   height: 478px !important;
   background-color: var(--blue_f);
   border-radius: 5px;
+  margin-left: 76px;
+  margin-right: 76px;
 }
 
 .contentTitleCont {
@@ -27,12 +29,14 @@
   font-weight: 600;
 }
 
-.contectInputText {
+.contentInputText {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   margin-top: -3%;
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .paragraphe {
@@ -41,7 +45,7 @@
 }
 
 .contentAdresse {
-  width: 331.67px;
+  width: 33.33%;
   height: 114px;
   margin-top: -14.4%;
 }
@@ -49,12 +53,11 @@
 .contentAdresse .paragraphe {
   width: 200px;
   height: 114px;
-  border: 1px solid wh;
 }
 
 .contact_phone {
   margin-top: -14.4%;
-  width: 331.67px;
+  width: 33.33%;
   height: 114px;
 }
 
@@ -100,6 +103,7 @@
 }
 
 .btn_envoi {
+  cursor: pointer;
   width: 101.74px;
   height: 35px;
   border-radius: 5px;

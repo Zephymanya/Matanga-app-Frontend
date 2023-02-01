@@ -10,8 +10,7 @@ import { BsInstagram } from "react-icons/bs";
 function Footer() {
   const component = (
     <>
-      <footer className={styles.contentPrincip} >
-
+      <footer className={styles.contentPrincip}>
         <div className={styles.contentImageFooter}>
           <Image src={logo} alt="logo" className={styles.logo} />
         </div>
@@ -36,11 +35,12 @@ function Footer() {
 
           <div className={styles.lastTexte}>
             <p>
-              ©2022<span className={styles.textMatanga}> Matanga.</span>Designer & développer par
-              <span className={styles.flyts} > Flyts </span>&<span className={styles.mayembe}>Mayembe</span>
+              ©2022<span className={styles.textMatanga}> Matanga.</span>Designer
+              & développer par
+              <span className={styles.flyts}> Flyts </span>&
+              <span className={styles.mayembe}>Mayembe 2Z</span>
             </p>
           </div>
-          
         </div>
       </footer>
     </>

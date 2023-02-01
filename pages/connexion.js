@@ -7,9 +7,7 @@ const connexion = () => {
       <div className={styles.content_inscription}>
         <div className={styles.content_general}>
           <div className={styles.content_input}>
-            <p className={styles.title}>Inscrivez-vous</p>
-            {/*
-             */}
+            <p className={styles.title}>Connectez-Vous</p>
             <div className={styles.content_email}>
               <label>Email</label>
               <input type={"text"}></input>
@@ -20,11 +18,10 @@ const connexion = () => {
               <label>Mot de passe</label>
               <input type={"text"}></input>
             </div>{" "}
-            {/* 
-            
-            */}
+            {/*
+             */}
             <div className={styles.content_btn}>
-              <button className={styles.sinup}>S'inscrire</button>
+              <button className={styles.sinup}>Se connecter</button>
             </div>
           </div>
         </div>

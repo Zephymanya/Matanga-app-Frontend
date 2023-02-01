@@ -1,10 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import styles from "../styles/cimetiere.module.css";
-import mortFemme from "../public/img/femmEM.jpg";
-
+import Card_list from "../components/partials/_Card_list";
+import Slider from "../components/partials/_Slider";
 
 const cimetiere = () => {
+  const tab = [1, 2, 3, 4, 5, 6];
+
   const renduCimetiere = (
     <>
       <div className={styles.contentCimet}>
@@ -31,163 +33,9 @@ const cimetiere = () => {
         </div>
       </div>
 
-      {/* SECTION CARDE MORT AUX CIMETIERES */}
       <div className={styles.ContentPrincipCard}>
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-
-        {/* Carde 1*********************************** */}
-
-        <div className={styles.contentCardCimet}>
-          <div className={styles.titleContentCimet}>
-            <h1 className={styles.CardTitle}>Jonh Doé</h1>
-            <p className={styles.lieuCimet}>Enterré au cimetière de la Gombe</p>
-          </div>
-
-          <div className={styles.CardImage}>
-            <Image src={mortFemme} className={styles.ImageCardk} alt="decès" />
-          </div>
-
-          <div className={styles.textCard}>
-            <p>
-              Le lorem ipsum est, en imprimerie, une suite de mots sans
-              signification utilisée à titre provisoire pour calibrer une mise
-              en page, le texte définitif venant remplacer le faux-texte dès
-              qu'il est prêt ou que la mise en page est achevée. Généralement,
-              on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
-            </p>
-          </div>
-          <div className={styles.btnArr}>
-            <button className={styles.voirPlus}>Voir plus</button>
-          </div>
-        </div>
-        {/* Carde 1*********************************** */}
+        <Card_list tab={tab} />
+        <Card_list tab={tab} />
       </div>
 
       <div className={styles.vuDefunt}>
