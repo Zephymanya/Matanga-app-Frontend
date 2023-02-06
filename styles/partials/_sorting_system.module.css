@@ -1,0 +1,91 @@
+.Sorting
+{ 
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Sorting .form
+{ 
+    display: flex;
+    align-items: stretch;
+}
+
+.from_center
+{ 
+    justify-content: center;
+}
+
+.Sorting .form .input_search,
+.Sorting .form .select_list
+{ 
+    border: 1px solid var(--black_2);
+    background: none;
+    outline: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 10px;
+
+    transition: .3s ease-in-out;
+}
+.Sorting .form .input_search:focus,
+.Sorting .form .select_list:focus
+{ 
+    border: 1px solid var(--orange_c);
+}
+
+.Sorting .form .select_list
+{ 
+    width: 250px;
+    margin-left: 20px;
+}
+
+.Sorting .form .submit_btn
+{ 
+    border: 2px solid var(--blue_f);
+
+    background-color: var(--blue_f);
+    margin-left: 20px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: var(--orange_c);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+}
+.Sorting .form .submit_btn:hover
+{
+    border: 2px solid var(--blue_f);
+    background: none;
+    color: var(--blue_f);
+}
+
+
+.Sorting .btn_add_defunt
+{
+    border: 2px solid var(--blue_f);
+    background-color: var(--blue_f);
+    color: var(--orange_c);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s ease-in-out;
+}
+.Sorting .btn_add_defunt:hover
+{
+    border: 2px solid var(--blue_f);
+    background: none;
+    color: var(--blue_f);
+}

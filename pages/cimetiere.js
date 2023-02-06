@@ -1,60 +1,30 @@
-import Image from "next/image";
-import React from "react";
-import styles from "../styles/cimetiere.module.css";
-import Card_list from "../components/partials/_Card_list";
-import Slider from "../components/partials/_Slider";
+import CardsList from "../components/partials/_CardsList"
+import SeeMore from "../components/partials/_SeeMore"
+import SortingSystem from "../components/partials/_SortingSystem"
+import styles from "../styles/cimetiere.module.css"
 
-const cimetiere = () => {
-  const tab = [1, 2, 3, 4, 5, 6];
 
-  const renduCimetiere = (
-    <>
-      <div className={styles.contentCimet}>
-        <h1 className={styles.cimetTitle}>Notre cimetière</h1>
-        <hr className={styles.cimetBarr} />
-      </div>
+function cimetiere ()
+{
+  const tab = [1, 2, 3, 4 ,5 ,6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
-      <div className={styles.ContentInputs}>
-        <input
-          type={"text"}
-          className={styles.inputCherCimet}
-          placeholder="Qui cherchez-vous?"
-        />
+  const component = 
+  <>
+    <div className={styles.Cimetiere}>
+      <h2 className={styles.title_page}>
+        <span>Notre cimetière</span>
+        <i></i>
+      </h2>
 
-        <select className={styles.selectCimetier}>
-          <option valeur="fr"> Choisissez le cimetière</option>
-          <option valeur="nl">Gombe</option>
-          <option valeur="en">Necropol</option>
-          <option valeur="other">Mbeseke</option>
-        </select>
+      <SortingSystem addBtn={false}/>
 
-        <div>
-          <button className={styles.btnCimet}>Chercher</button>
-        </div>
-      </div>
+      <CardsList tab={tab}/>
 
-      <div className={styles.ContentPrincipCard}>
-        <Card_list tab={tab} />
-        <Card_list tab={tab} />
-      </div>
+      <SeeMore tab={tab} text={"défunt"} total={15} />
+    </div>
+  </>
 
-      <div className={styles.vuDefunt}>
-        <div>
-          <p>Vous avez vu 12 défunts sur 23</p>
-        </div>
+  return component
+}
 
-        <div className={styles.progresseBar}>
-          <div className={styles.timeLine}></div>
-        </div>
-
-        <div className={styles.btnVplusGeneral}>
-          <button className={styles.btnVplusT}>Voir plus</button>
-        </div>
-      </div>
-    </>
-  );
-
-  return renduCimetiere;
-};
-
-export default cimetiere;
+export default cimetiere

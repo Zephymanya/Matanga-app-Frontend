@@ -84,7 +84,7 @@
 
 .Nav .menu .btns .btn_login
 {
-    border: 1px solid var(--orange_c);
+    border: 2px solid var(--orange_c);
     background-color: var(--orange_c);
     padding: 6px 10px;
     border-radius: 5px;
@@ -94,7 +94,7 @@
 
 .Nav .menu .btns .btn_register
 {
-    border: 1px solid var(--white_6);
+    border: 2px solid var(--white_6);
     padding: 6px 10px;
     border-radius: 5px;
     color: var(--white_6);

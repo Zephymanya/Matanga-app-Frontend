@@ -1,0 +1,208 @@
+.content_modale {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.content_modale .corp_du_modale {
+  margin-top: 5%;
+  width: 864px;
+  height: 80%;
+  border-radius: 5px;
+
+  background-color: var(--white);
+}
+
+.content_modale .corp_du_modale .header_modale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 4%;
+  padding-top: 3%;
+  height: 15%;
+}
+
+.content_modale .corp_du_modale .header_modale p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.content_modale .corp_du_modale .header_modale .btnExit {
+  border-radius: 50%;
+  border: none;
+  color: var(--orange_c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+  height: 100%;
+  background-color: var(--white);
+}
+
+.content_modale .corp_du_modale .header_modale .btnExit :hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+.content_modale .corp_du_modale .header_modale button {
+  color: var(--orange_c);
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.icon {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content_modale .formulaire {
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.content_modale .formulaire .inputImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+}
+
+.content_modale .formulaire .lign_one_inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 5% 0% 5%;
+  margin-bottom: 2%;
+}
+
+.content_modale .formulaire .lign_one_inputs .name {
+  /* width: 248px;
+  height: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content_modale .formulaire .lign_one_inputs .postnom {
+  /* width: 248px;
+  height: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content_modale .formulaire .lign_one_inputs .prenom {
+  /* width: 248px;
+  height: 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content_modale .formulaire .lign_one_inputs input {
+  width: 248px;
+  height: 33px;
+}
+
+/* ********************* */
+
+.content_modale .formulaire .lign_deux_inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 5% 0% 5%;
+  margin-bottom: 2%;
+}
+
+.content_modale .formulaire .lign_deux_inputs input {
+  width: 370px;
+  height: 33px;
+  color: var(--black_2);
+}
+
+.naissance_date {
+  display: flex;
+  flex-direction: column;
+}
+
+.mort_date {
+  display: flex;
+  flex-direction: column;
+}
+
+.content_modale .formulaire .lign_deux_inputs select {
+  width: 370px;
+  height: 33px;
+  border: 2px solid var(--black_2);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--black_2);
+}
+
+.corp_du_modale input {
+  border: 2px solid var(--black_2);
+  border-radius: 5px;
+}
+
+.corp_du_modale label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 2%;
+}
+
+.footer_modale {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+}
+
+.footer_modale button {
+  width: 100px;
+  height: 35px;
+  border: none;
+  background-color: var(--blue_f);
+  color: var(--orange_c);
+  border-radius: 5px;
+}
+
+.hommage_editor {
+  width: 100%;
+  padding: 0% 5% 0% 5%;
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.hommage_editorr {
+  width: 100%;
+  padding: 0% 5% 0% 5%;
+  height: auto;
+  margin-bottom: 3%;
+}
+
+.hommage_editorr label {
+  margin-top: 30%;
+}
+
+.contentLabel {
+  margin-bottom: 1%;
+}
