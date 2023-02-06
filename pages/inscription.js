@@ -1,30 +1,9 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styles from "../styles/inscription.module.css";
-import homme from "../public/img/homme.jpg";
-import { BiUser } from "react-icons/bi";
+import UploadImage from "../components/partials/_UploadImage";
 
-const inscription = () => {
-  const [uploadImage, setUploadImage] = useState();
-  const [preview, setPreview] = useState("");
-
-  const handleImage = (e) => {
-    if (e.target.files && e.target.files.length > 0) {
-      setUploadImage(e.target.files[0]);
-    }
-  };
-
-  useEffect(() => {
-    if (uploadImage) {
-      const reader = new FileReader();
-      reader.readAsDataURL(uploadImage);
-      reader.onloadend = () => {
-        setPreview(reader.result);
-      };
-    } else {
-    }
-  }, [uploadImage]);
-
+const inscription = (inscription) => {
   const RenduInscription = (
     <>
       <div className={styles.content_inscription}>
@@ -48,26 +27,7 @@ const inscription = () => {
           </div>
 
           <div className={styles.img_content}>
-            <div className={styles.content_image}>
-              <input
-                type="file"
-                multiple
-                accept="image/*"
-                className={styles.input_file}
-                onChange={handleImage}
-              />
-              {preview ? (
-                <Image
-                  src={preview}
-                  alt="Image use"
-                  className={styles.User_img}
-                  width={200}
-                  height={200}
-                />
-              ) : (
-                <BiUser className={styles.User_img} />
-              )}
-            </div>
+            <UploadImage inscription={inscription} />
             <div className={styles.content_btn}>
               <button className={styles.sinup}>S'inscrire</button>
             </div>

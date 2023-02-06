@@ -1,61 +1,46 @@
-.Cimetiere
-{
-  width: 100;
+.Cimetiere {
+  width: 100%;
   padding: 40px 5%;
   padding-top: calc(70px + 40px);
+  position: relative;
 }
 
-.title_page
-{
-    font-size: 23px;
-    font-weight: 500;
+.title_page {
+  font-size: 23px;
+  font-weight: 500;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.title_page
-{
-    margin: 0;
-    margin-bottom: 25px;
-    padding: 0;
+.title_page {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
 }
 
-.title_page i
-{
-    background-color: var(--orange_c);
-    width: 40px;
-    height: 2.4px;
-    border-radius: 10px;
-    margin-top: 5px;
+.title_page i {
+  background-color: var(--orange_c);
+  width: 40px;
+  height: 2.4px;
+  border-radius: 10px;
+  margin-top: 5px;
 
-    display: inline-block;
+  display: inline-block;
 }
-
-
-
-
-
-
-
 
 /**-- Ecran(<991px) --**/
-@media all and (max-width: 991px) 
-{
+@media all and (max-width: 991px) {
 }
 
 /**-- Ecran(<771px) --**/
-@media all and (max-width: 771px) 
-{   
+@media all and (max-width: 771px) {
 }
 
-
 /**-- Ecran(<1500px) --**/
-@media all and (min-width: 1500px) 
-{    
-  .Cimetiere
-  {
+@media all and (min-width: 1500px) {
+  .Cimetiere {
     padding: 0 20%;
   }
 }
