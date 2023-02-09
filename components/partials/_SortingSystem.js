@@ -1,8 +1,12 @@
 import styles from "../../styles/partials/_sorting_system.module.css"
 import {FiPlus} from "react-icons/fi"
+import { useContext } from "react"
+import { dataContext } from "../../contexts/dataContext"
 
 function SortingSystem({addBtn}) 
 {
+    const { setActiveModalCreate } = useContext(dataContext)
+
     const component = 
     <>
         <div className={`${styles.Sorting} ${!addBtn ? styles.from_center : null}`}>
@@ -21,7 +25,7 @@ function SortingSystem({addBtn})
             {
                 addBtn 
                 ?
-                    <button className={styles.btn_add_defunt} title={"Ajouter un défunt"}>
+                    <button className={styles.btn_add_defunt} onClick={() => {setActiveModalCreate(true)}} title={"Ajouter un défunt"}>
                         <FiPlus className={styles.icon}/>
                     </button>
                 : null

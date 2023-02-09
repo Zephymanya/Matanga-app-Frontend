@@ -11,6 +11,7 @@
   --blue_f_6: rgba(0, 12, 25, 0.6);
   --blue_f_5: rgba(0, 12, 25, 0.5);
   --blue_f_2: rgba(0, 12, 25, 0.2);
+  --blue_f_1: rgba(0, 12, 25, 0.1);
 
   --white: #ffffff;
   --white_4: rgba(255, 255, 255, 0.4);
@@ -28,6 +29,11 @@
   --black_3: rgba(0, 0, 0, 0.3);
   --black_2: rgba(0, 0, 0, 0.2);
   --black_015: rgba(0, 0, 0, 0.15);
+
+  --border_grey: #ccced1;
+
+  --red_border: #e64438;
+  --red: rgba(230 68 56 / .2);
 }
 
 html,
@@ -96,8 +102,49 @@ a {
   display: inline-block;
 }
 
+.ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) 
+{
+  height: 200px;
+  padding: 10px 15px;
+}
+.ck.ck-editor__main > .ck-editor__editable:focus
+{
+  height: 200px !important;
+  border-color: var(--orange_c) !important;
+  padding: 10px 15px;
+}
+
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #000000;
   }
+}
+
+
+
+
+
+
+
+
+/**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+  .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) 
+  {
+    height: 150px;
+  }
+}
+
+/**-- Ecran(<771px) --**/
+@media all and (max-width: 771px) 
+{ 
+}
+
+
+/**-- Ecran(<1500px) --**/
+@media all and (min-width: 1500px) 
+{    
 }
