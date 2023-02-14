@@ -1,0 +1,300 @@
+.Modal
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 11;
+
+    transition: .3s ease-in-out;
+}
+.Active_modal
+{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.Modal .bloc
+{
+    position: relative;
+
+    background-color: var(--white);
+    width: 90%;
+    height: 90vh;
+    border-radius: 10px;
+    color: var(--blue_f);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+
+    z-index: 12;
+
+    transition: .3s ease-in-out;
+}
+.Active_modal .bloc
+{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.Modal .bloc .top
+{
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Modal .bloc .top h3
+{
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.Modal .bloc .top .btn_close_modal
+{
+    border: none;
+    padding: 0;
+    background: none;
+
+    transform: rotate(45deg);
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--blue_f_6);
+
+    transition: .3s ease-in-out;
+}
+.Modal .bloc .top .btn_close_modal:hover
+{
+    color: var(--orange_c);
+}
+
+.Modal .bloc .content
+{
+    height: calc(100% - 50px - 70px);
+    padding: 10px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Modal .bloc .content .errors
+{
+    border: 1px solid var(--red_border);
+    background-color: var(--red);
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin-bottom: 30px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Modal .bloc .content .errors .error
+{
+    color: var(--red_border);
+    font-size: 14px;
+    font-style: italic;
+    text-transform: lowercase;
+}
+
+.Modal .bloc .content .img_bloc
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal .bloc .content .img_bloc input
+{
+    display: none;
+}
+
+.Modal .bloc .content .img_bloc .img
+{
+    border: 3px solid var(--border_grey);
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: var(--blue_f_6);
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal .bloc .content .form
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.Modal .bloc .content .form .tree_inputs
+{
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.Modal .bloc .content .form .two_inputs
+{
+    width: 100%;
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.Modal .bloc .content .form .tree_inputs .input,
+.Modal .bloc .content .form .two_inputs .input
+{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.Modal .bloc .content .form .tree_inputs label,
+.Modal .bloc .content .form .two_inputs label,
+.Modal .bloc .content .form .one_input label
+{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.Modal .bloc .content .form .tree_inputs input,
+.Modal .bloc .content .form .two_inputs input,
+.Modal .bloc .content .form .two_inputs select
+{
+    border: 1px solid var(--border_grey);
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+
+    transition: .3s ease-in-out;
+}
+.Modal .bloc .content .form .tree_inputs input:focus
+{
+    border: 1px solid var(--orange_c);
+}
+
+.Modal .bloc .content .form .one_input
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+.Modal .bloc .bottom
+{
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal .bloc .bottom button
+{
+    border: 2px solid var(--blue_f);
+    background-color: var(--blue_f);
+    color: var(--orange_c);
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+
+    transition: .3s ease-in-out;
+}
+
+
+.Modal .close_modal
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--blue_f_5);
+}
+
+
+
+
+
+
+
+
+/**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+    .Modal .bloc .content .form .tree_inputs
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }  
+}
+
+/**-- Ecran(<771px) --**/
+@media all and (max-width: 771px) 
+{ 
+    .Modal .bloc .content .form .two_inputs
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }  
+}
+
+
+/**-- Ecran(<1500px) --**/
+@media all and (min-width: 1500px) 
+{    
+  .Cimetiere
+  {
+    padding: 0 20%;
+  }
+}

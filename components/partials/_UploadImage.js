@@ -32,8 +32,6 @@ function _UploadImage({ modal, inscription }) {
           <div className={styles.contenteI_input}>
             <input
               type="file"
-              multiple
-              accept="image/*"
               className={styles.input_file}
               onChange={handleImage}
             />
