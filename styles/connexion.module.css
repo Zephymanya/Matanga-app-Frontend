@@ -126,6 +126,8 @@
   width: 300px;
   height: 35px;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
   background-color: var(--orange_c);
   color: var(--white);
   border: none;

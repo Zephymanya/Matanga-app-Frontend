@@ -66,7 +66,7 @@ const connexion = () => {
             */}
             <div className={styles.content_btn}>
               <button className={styles.sinup} onClick={UserLoin}>
-                S'inscrire
+                Se connecter
               </button>
               <div className={styles.erreur}>
                 {loader ? <span className={styles.loader}></span> : null}
