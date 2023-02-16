@@ -3,13 +3,13 @@ import styles from "../styles/inscription.module.css";
 import axios from "axios";
 
 const inscription = (data) => {
-  const [Inputnom, setInputnom] = useState();
-  const [Inputpostnom, setInputpostnom] = useState();
-  const [Inputprenom, setInputprenom] = useState();
-  const [InputSexe, setInputSexe] = useState();
-  const [InputEmail, setInputEmail] = useState();
-  const [Inputpassword, setInputpassword] = useState();
-  const [InputConfirm, setInputConfirm] = useState();
+  const [Inputnom, setInputnom] = useState("");
+  const [Inputpostnom, setInputpostnom] = useState("");
+  const [Inputprenom, setInputprenom] = useState("");
+  const [InputSexe, setInputSexe] = useState("");
+  const [InputEmail, setInputEmail] = useState("");
+  const [Inputpassword, setInputpassword] = useState("");
+  const [InputConfirm, setInputConfirm] = useState("");
 
   const CreateUser = () => {
     axios
