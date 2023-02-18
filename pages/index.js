@@ -10,7 +10,7 @@ import {
   MdEmail,
 } from "react-icons/md";
 import { BsFillPhoneFill } from "react-icons/bs";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useContext } from "react";
 import matanga from "../public/img/matanga-image.jpg";
 import Cart_defunt from "../components/partials/_Cart_defunt";
 import Slider from "../components/partials/_Slider";
@@ -145,6 +145,7 @@ function Home() {
             <MdEmail className={styles.icon} />
             <p>contact@matanga-app.com</p>
           </div>
+
           <div className={styles.texte}>
             <BsFillPhoneFill className={styles.icon} />
             <p>+243 821 234 567</p>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import styles from "../styles/inscription.module.css";
 import axios from "axios";
+import { routeApi } from "../datas/webApi";
+import { configHeader } from "../datas/webApi";
 
 const inscription = (data) => {
   const [Inputnom, setInputnom] = useState("");
@@ -12,18 +14,19 @@ const inscription = (data) => {
   const [InputConfirm, setInputConfirm] = useState("");
 
   const CreateUser = () => {
+    const form = new FormData();
+    form.append("nom", Inputnom);
+    form.append("prenom", Inputprenom);
+    form.append("postnom", Inputpostnom);
+    form.append("sexe", InputSexe);
+    form.append("email", InputEmail);
+    form.append("password", Inputpassword);
+    form.append("password_confirmation", InputConfirm);
+
     axios
-      .post("http://127.0.0.1:8000/api/auth/register", {
-        nom: Inputnom,
-        postnom: Inputpostnom,
-        prenom: Inputprenom,
-        sexe: InputSexe,
-        email: InputEmail,
-        password: Inputpassword,
-        password_confirmation: InputConfirm,
-      })
-      .then((data) => {
-        console.log("Donner enreistrer avec succès", data);
+      .post(routeApi.register, form, configHeader)
+      .then((res) => {
+        console.log("Donner enreistrer avec succès", res);
       })
       .catch((err) => {
         console.log(err);

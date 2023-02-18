@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "../styles/connexion.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { rooter } from "../datas/web";
+import { routeApi, configHeader } from "../datas/webApi";
 
 const connexion = () => {
   const [email, setEmail] = useState("");
@@ -18,16 +20,24 @@ const connexion = () => {
       setErreur(true);
       setMessage("Remplissez les deux champs SVP!");
     } else {
+      setLoader(true);
+      const form = new FormData();
+      form.append("email", email);
+      form.append("password", password);
+
       axios
-        .post("http://127.0.0.1:8000/api/auth/login", {
-          email,
-          password,
-        })
+        .post(routeApi.login, form, configHeader)
         .then((res) => {
-          localStorage.setItem("token", res.data.access_token);
+          localStorage.setItem(
+            "token",
+            JSON.stringify(`bearer ${res.data.access_token}`)
+          );
+
           localStorage.setItem("user", JSON.stringify(res.data.user));
-          router.push("/");
-          setLoader(true);
+
+          router.push(rooter.home.link);
+
+          setLoader(false);
         })
         .catch((err) => {
           setErreurData(true);

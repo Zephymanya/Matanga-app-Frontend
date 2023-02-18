@@ -10,6 +10,7 @@
   --blue_f_7: rgba(0, 12, 25, 0.7);
   --blue_f_6: rgba(0, 12, 25, 0.6);
   --blue_f_5: rgba(0, 12, 25, 0.5);
+  --blue_f_4: rgba(0, 12, 25, 0.4);
   --blue_f_2: rgba(0, 12, 25, 0.2);
   --blue_f_1: rgba(0, 12, 25, 0.1);
 
@@ -33,7 +34,7 @@
   --border_grey: #ccced1;
 
   --red_border: #e64438;
-  --red: rgba(230 68 56 / .2);
+  --red: rgba(230 68 56 / 0.2);
 }
 
 html,
@@ -52,14 +53,11 @@ a {
   box-sizing: border-box;
 }
 
-
-.owl-dots
-{
+.owl-dots {
   margin-top: 30px !important;
 }
 
-.owl-dots .owl-dot span
-{
+.owl-dots .owl-dot span {
   position: relative;
 
   border: 2px solid var(--black_2);
@@ -72,26 +70,23 @@ a {
   align-items: center;
   justify-content: center;
 
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.owl-dots .owl-dot span:hover
-{
+.owl-dots .owl-dot span:hover {
   border: 2px solid var(--orange_c);
 }
 
-.owl-dots .active span
-{
+.owl-dots .active span {
   border: 2px solid var(--orange_c) !important;
 
-  transition: .3s ease-in-out !important;
+  transition: 0.3s ease-in-out !important;
 }
-.owl-dots .active span::before
-{
+.owl-dots .active span::before {
   position: absolute;
   top: 50%;
   left: 50%;
 
-  content: '';
+  content: "";
 
   background-color: var(--orange_c);
   width: 6px;
@@ -102,19 +97,15 @@ a {
   display: inline-block;
 }
 
-.ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) 
-{
+.ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
   height: 200px;
   padding: 10px 15px;
 }
-.ck.ck-editor__main > .ck-editor__editable:focus
-{
+.ck.ck-editor__main > .ck-editor__editable:focus {
   height: 200px !important;
   border-color: var(--orange_c) !important;
   padding: 10px 15px;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -122,29 +113,17 @@ a {
   }
 }
 
-
-
-
-
-
-
-
 /**-- Ecran(<991px) --**/
-@media all and (max-width: 991px) 
-{
-  .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) 
-  {
+@media all and (max-width: 991px) {
+  .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
     height: 150px;
   }
 }
 
 /**-- Ecran(<771px) --**/
-@media all and (max-width: 771px) 
-{ 
+@media all and (max-width: 771px) {
 }
 
-
 /**-- Ecran(<1500px) --**/
-@media all and (min-width: 1500px) 
-{    
+@media all and (min-width: 1500px) {
 }
