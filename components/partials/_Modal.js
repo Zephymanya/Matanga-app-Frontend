@@ -96,7 +96,7 @@ function Modal({activeModal})
                 <div className={styles.top}>
                     <h3>Nouveau défunt</h3>
 
-                    <button onClick={() => setActiveModalCreate(false)} className={styles.btn_close_modal} title={"Fermer le modale"}>
+                    <button onClick={() => setActiveModalCreate(false)} className={styles.btn_close_modal} title={"Fermer l   <p>X</p>e modale"}>
                         <FiPlus className={styles.icon}/>
                     </button>
                 </div>
