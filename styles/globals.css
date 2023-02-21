@@ -49,6 +49,11 @@ a {
   text-decoration: none;
 }
 
+a, input, select, textarea, button
+{
+  outline: none;
+}
+
 * {
   box-sizing: border-box;
 }
