@@ -1,36 +1,41 @@
-const linkApi = "http://localhost:8001";
+const linkApi = "http://localhost:8001"
 
 export const routeApi = {
-  login: `${linkApi}/api/auth/login`,
-  register: `${linkApi}/api/auth/register`,
-  refresh: `${linkApi}/api/auth/refresh`,
-  user_profile: `${linkApi}/api/auth/user-profile`,
+    login:         `${linkApi}/api/auth/login`,
+    register:      `${linkApi}/api/auth/register`,
+    refresh:       `${linkApi}/api/auth/refresh`,
+    user_profile:  `${linkApi}/api/auth/user-profile`,
 
-  create_defunt: `${linkApi}/api/defunt/create-defunt`,
-  edit_defunt: `${linkApi}/api/defunt/edit-defunt`,
-  get_defunt: `${linkApi}/api/defunt/defunt`,
-  delete_defunt: `${linkApi}/api/defunt/delete-defunt`,
+    create_defunt:   `${linkApi}/api/auth/create-defunt`,
+    edit_defunt:     `${linkApi}/api/auth/edit-defunt`,
+    edit_defunt:     `${linkApi}/api/auth/edit-defunt`,
+    get_all_defunts: `${linkApi}/api/auth/defunts`,
+    get_defunt:      `${linkApi}/api/auth/defunt`,
+    delete_defunt:   `${linkApi}/api/auth/delete-defunt`,
+    
+    get_defunts_random: `${linkApi}/api/defunts-random`,
+    get_defunts_all_user: `${linkApi}/api/defunts-all-users`,
 
-  logout: `${linkApi}/api/auth/logout`,
-};
+    search_all_defunt: `${linkApi}/api/search-all-defunt`,
+    search_all_user_defunt: `${linkApi}/api/auth/search-all-user-defunt`,
 
-export const configAuthHeader = {
-  headers: {
-    "Content-Type": "application/json",
-    // "Authorization": localStorage.getItem("token")
-  },
-};
+
+    get_cimetieres: `${linkApi}/api/cimetieres`,
+
+    logout:        `${linkApi}/api/auth/logout`,
+}
+
 
 export const configHeader = {
-  headers: {
-    "Content-Type": "application/json",
-    "X-Requested-With": "XMLHttpRequest",
-  },
-};
+    headers:{
+        "Content-Type": "application/json",
+        "X-Requested-With": "XMLHttpRequest"
+    }
+}
 
-export const configAuthFormDataHeader = {
-  headers: {
-    "Content-Type": "multipart/form-data",
-    // "Authorization": localStorage.getItem("token")
-  },
-};
+export const configHeaderFormData = {
+    headers:{
+        "Content-Type": "multipart/form-data",
+        "X-Requested-With": "XMLHttpRequest"
+    }
+}

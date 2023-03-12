@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "../styles/connexion.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
-import { rooter } from "../datas/web";
-import { routeApi, configHeader } from "../datas/webApi";
+import { configHeader, routeApi } from "../datas/webApi";
 import { BiLoaderAlt } from "react-icons/bi"
+import { dataContext } from "../contexts/dataContext";
+import { rooter } from "../datas/web";
+import Cookies from "js-cookie";
+import Head from "next/head";
+
 
 const connexion = () => {
 
@@ -20,23 +24,26 @@ const connexion = () => {
     form.append("email", email);
     form.append("password", password);
 
-    axios
-      .post(routeApi.login, form, configHeader)
-      .then((res) => {
-        localStorage.setItem("token", `bearer ${res.data.access_token}`);
+    axios.post(routeApi.login, form, configHeader)
+    .then((res) => {
+      Cookies.set("token", `bearer ${res.data.access_token}`, { expires: 7 })
+      Cookies.set("user", JSON.stringify(res.data.user), { expires: 7 })
 
-        localStorage.setItem("user", JSON.stringify(res.data.user));
+      SetUserToken("")
 
-        router.push(rooter.home.link);
+      router.push(rooter.defunt.link);
 
-        setLoader(false)
-      })
-      .catch((err) => {
+      setLoader(false)
+    })
+    .catch((err) => {
+      if(err.response)
+      {
         const dataErrors = err.response.data
 
         dataErrors ? setErrors(dataErrors) : setErrors(null)
         setLoader(false)
-      });
+      }
+    })
   };
 
 
@@ -44,11 +51,18 @@ const connexion = () => {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState(null);
   const [loader, setLoader] = useState(false);
+  const {SetUserToken} = useContext(dataContext);
 
   const router = useRouter();
 
   const RenduConnexion = (
     <>
+      <Head>
+        <meta name="description" content={`Connectez-vous sur ${process.env.NEXT_PUBLIC_NAME_SITE} pour accéder à plus des fonctionnalitées`} />
+        <title>{ `${rooter.login.name} | ${process.env.NEXT_PUBLIC_NAME_SITE}` }</title>
+      </Head>
+
+
       <div className={styles.Content}>
         <div className={styles.bloc}>
           <h2 className={styles.title}>Connectez-Vous</h2>
@@ -59,7 +73,7 @@ const connexion = () => {
             <input
               type={"text"}
               onChange={(e) => setEmail(e.target.value)}
-              className={errors ? errors.email ? styles.error : null : null}
+              className={`${errors ? errors.email ? styles.error : null : null} ${errors ? errors.error ? styles.error : null : null}`}
               required
               id="Email"
               placeholder="Tapez votre email..."
@@ -76,17 +90,31 @@ const connexion = () => {
                 : null
               :null
             }
+
+
+            {   
+              errors
+              ?
+                errors.error
+                ?
+                  <div className={styles.errors}>
+                    <span>{"L'adresse e-mail ou le mot de passe est incorrecte"}</span>
+                  </div>
+                : null
+              :null
+            }
           </div>
 
           <div className={styles.input}>
-            <label>Mot de passe</label>
+            <label htmlFor="Password">Mot de passe</label>
 
             <input
               type={"password"}
               onChange={(e) => setPassword(e.target.value)}
               className={errors ? errors.password ? styles.error : null : null}
               required
-              placeholder="Tapez votre mot de passe..."
+              id="Password"
+              placeholder="********"
             ></input>
 
             {

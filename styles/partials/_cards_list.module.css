@@ -8,6 +8,21 @@
     grid-gap: 30px;
 }
 
+.List_vide
+{
+    width: 100%;
+    margin: 40px 0;
+}
+
+
+.not_defunt
+{
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--black_5);
+}
+
 
 
 

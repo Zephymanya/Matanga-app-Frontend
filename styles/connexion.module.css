@@ -18,9 +18,17 @@
 
 .Content .bloc h2
 {
+  color: var(--orange_c);
   margin: 0;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.Content .bloc .inputs
+{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .Content .bloc .input
@@ -38,7 +46,8 @@
   font-size: 15px;
 }
 
-.Content .bloc .input input
+.Content .bloc .input input,
+.Content .bloc .input select
 {
   border: 1px solid var(--white_4);
   background: none;
@@ -49,7 +58,8 @@
 
   transition: .3s ease-in-out;
 }
-.Content .bloc .input input:focus
+.Content .bloc .input input:focus,
+.Content .bloc .input select:focus
 {
   border: 1px solid var(--white_8);
 }
@@ -87,7 +97,7 @@
 {
   border: 2px solid var(--orange_c);
   background-color: var(--orange_c);
-  padding: 8px 10px;
+  padding: 8px 15px;
   border-radius: 5px;
   color: var(--white_9);
   margin-right: 20px;
@@ -113,5 +123,39 @@
   }
   100%{
       transform: rotate(360deg);
+  }
+}
+
+
+.hidde
+{
+  visibility: hidden;
+}
+
+
+
+
+/** MEDIA QUERY **/
+/**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+  .Content .bloc
+  {
+    width: 100%;
+  }
+}
+
+
+/**-- #FIN Ecran(<771px) --**/
+@media all and (max-width: 771px) {
+}
+
+
+/**-- Ecran(<1500px) --**/
+@media all and (min-width: 1500px) 
+{   
+  .Content
+  {
+    padding: 50px 19.5% !important;
   }
 }

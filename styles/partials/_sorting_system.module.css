@@ -56,6 +56,10 @@
     font-weight: 500;
     cursor: pointer;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transition: .3s ease-in-out;
 }
 .Sorting .form .submit_btn:hover
@@ -63,6 +67,17 @@
     border: 2px solid var(--blue_f);
     background: none;
     color: var(--blue_f);
+}
+
+.Sorting .form .submit_btn .txt
+{
+    display: inline-block;
+}
+
+.Sorting .form .submit_btn .icon
+{
+    font-size: 18px;
+    display: none;
 }
 
 
@@ -88,4 +103,71 @@
     border: 2px solid var(--blue_f);
     background: none;
     color: var(--blue_f);
+}
+
+
+
+
+/** MEDIA QUERY **/
+/**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+    .Sorting .form .input_search
+    { 
+        width: 250px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .Sorting .form .select_list
+    { 
+        border-left: none;
+        width: 190px;
+        border-radius: 0;
+    }
+
+    .Sorting .form .select_list
+    { 
+        margin-left: 0;
+    }
+    .Sorting .form .submit_btn
+    { 
+        margin-left: 0;
+        padding: 8px 15px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .Sorting .form .submit_btn .txt
+    {
+        display: none;
+    }
+    
+    .Sorting .form .submit_btn .icon
+    {
+        font-size: 18px;
+        display: inline-block;
+    }
+}
+
+
+/**-- #FIN Ecran(<771px) --**/
+@media all and (max-width: 771px) 
+{
+    .Sorting .form .input_search
+    { 
+        width: 150px;
+        border-radius: 5px 0 0 5px;
+    }
+
+    .Sorting .form .select_list
+    { 
+        border-left: none;
+        width: 100px;
+        border-radius: 0;
+    }
+}
+
+
+/**-- Ecran(<1500px) --**/
+@media all and (min-width: 1500px) 
+{   
 }
