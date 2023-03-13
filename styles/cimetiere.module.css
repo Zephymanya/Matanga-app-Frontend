@@ -30,6 +30,19 @@
   display: inline-block;
 }
 
+
+.not_defunt
+{
+  margin: 40px 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--black_5);
+}
+
+
+
+
 /**-- Ecran(<991px) --**/
 @media all and (max-width: 991px) {
 }

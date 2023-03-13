@@ -27,6 +27,7 @@
     font-size: 17px;
     color: var(--blue_f);
     margin-bottom: 7px;
+    text-transform: capitalize;
 }
 
 .Cart .title span
@@ -53,6 +54,9 @@
 
 .Cart .texts 
 {
+    height: 120px;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin: 15px 0;
     font-size: 14px;
     color: var(--blue_f_7);
@@ -121,4 +125,12 @@
     border: 2px solid var(--blue_f);
     background: none;
     color: var(--blue_f);
+}
+
+.not_defunt
+{
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  color: var(--black_5);
 }

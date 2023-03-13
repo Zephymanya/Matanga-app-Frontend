@@ -28,6 +28,7 @@
 .Modal .bloc
 {
     position: relative;
+    overflow: hidden;
 
     background-color: var(--white);
     width: 90%;
@@ -67,6 +68,13 @@
     font-size: 19px;
 }
 
+.Modal .bloc .top h3 span
+{
+    margin-left: 8px;
+    color: var(--orange_c);
+    text-transform: capitalize;
+}
+
 .Modal .bloc .top .btn_close_modal
 {
     border: none;
@@ -97,30 +105,6 @@
     align-items: center;
 }
 
-.Modal .bloc .content .errors
-{
-    border: 1px solid var(--red_border);
-    background-color: var(--red);
-    width: 100%;
-    height: 50px;
-    border-radius: 5px;
-    padding: 5px 15px;
-    margin-bottom: 30px;
-
-    overflow-x: hidden;
-    overflow-y: auto;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.Modal .bloc .content .errors .error
-{
-    color: var(--red_border);
-    font-size: 14px;
-    font-style: italic;
-    text-transform: lowercase;
-}
 
 .Modal .bloc .content .img_bloc
 {
@@ -151,6 +135,7 @@
     cursor: pointer;
     text-align: center;
     padding: 10px;
+    margin-bottom: 40px;
     font-size: 14px;
     color: var(--blue_f_6);
     font-weight: 500;
@@ -158,6 +143,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.Modal .bloc .content .img_bloc .errorImg
+{
+    border: 3px solid var(--error_border);
+    color: var(--error_txt);
+    font-style: italic;
+}
+.Modal .bloc .content .img_bloc .error
+{
+    border: 3px solid var(--error_border);
+    color: var(--error_txt);
+    font-style: italic;
 }
 
 .Modal .bloc .content .form
@@ -207,8 +204,10 @@
 
 .Modal .bloc .content .form .tree_inputs input,
 .Modal .bloc .content .form .two_inputs input,
+.Modal .bloc .content .form .one_input select,
 .Modal .bloc .content .form .two_inputs select
 {
+    background: none;
     border: 1px solid var(--border_grey);
     padding: 10px 15px;
     border-radius: 5px;
@@ -216,7 +215,10 @@
 
     transition: .3s ease-in-out;
 }
-.Modal .bloc .content .form .tree_inputs input:focus
+.Modal .bloc .content .form .tree_inputs input:focus,
+.Modal .bloc .content .form .two_inputs input:focus,
+.Modal .bloc .content .form .one_input select:focus,
+.Modal .bloc .content .form .two_inputs select:focus
 {
     border: 1px solid var(--orange_c);
 }
@@ -224,7 +226,10 @@
 .Modal .bloc .content .form .one_input
 {
     width: 100%;
-    margin-top: 20px;
+    margin: 20px 0;
+
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -247,8 +252,30 @@
     padding: 8px 20px;
     border-radius: 5px;
     font-weight: 500;
+    cursor: pointer;
 
     transition: .3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Modal .bloc .bottom button .icon
+{
+  margin-left: 10px;
+  font-size: 18px;
+  transform: rotate(0deg);
+
+  animation: loader 1s ease-in-out infinite;
+}
+@keyframes loader 
+{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
 }
 
 
@@ -264,6 +291,24 @@
     background-color: var(--blue_f_5);
 }
 
+
+.form .error
+{
+  border: 1px solid var(--red_border) !important;
+}
+.form .error:focus
+{
+  border: 1px solid var(--red_border) !important;
+}
+
+.errors
+{
+  color: var(--red_border);
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 5px;
+  text-transform: lowercase;
+}
 
 
 

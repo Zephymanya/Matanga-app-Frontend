@@ -1,20 +1,38 @@
 import Image from "next/image";
 import styles from "../../styles/partials/_cart_defunt.module.css"
-import defunt from "../../public/img/defunt.jpg"
 import Link from "next/link";
+import { htmlPrefilter } from "jquery";
+import { HtmlContext } from "next/dist/shared/lib/html-context";
+import { dataContext } from "../../contexts/dataContext";
+import { useContext } from "react";
 
-function Cart_defunt({modify}) 
+function Cart_defunt({modify, defunt}) 
 {
-  const component = (
+    function handleActiveEditDefunt(id)
+    {
+        setActiveModalCreate(true) 
+        setActiveModalEdit(true)
+        setDefuntId(id)
+    }
+
+
+    const { 
+      setActiveModalCreate,
+      setActiveModalEdit,
+      setDefuntId
+    } = useContext(dataContext)
+
+
+    const component = (
     <div className={styles.Cart}>
         <div className={styles.title}>
-        <strong>John Doé</strong>
-        <span>Enterré au cimetière de la Gombe</span>
+        <strong>{`${defunt.prenom} ${defunt.nom}`}</strong>
+        <span>{defunt.cimetiere}</span>
         </div>
 
         <div className={styles.img_bloc}>
             <Image 
-                src={defunt} 
+                src={defunt.avatar} 
                 alt={"Défunt"}
                 className={styles.img_defunt}
                 layout={"fill"}
@@ -25,18 +43,7 @@ function Cart_defunt({modify})
         </div>
 
         <div className={styles.texts}>
-            <p>
-                Le lorem ipsum est, en imprimerie, 
-                une suite de mots sans signification 
-                utilisée à titre provisoire pour 
-                calibrer une mise en page, le texte 
-                définitif venant remplacer le 
-                faux-texte dès qu'il est prêt ou 
-                que la mise en page est achevée. 
-                Généralement, on utilise un texte 
-                en faux latin, le Lorem ipsum ou 
-                Lipsum.
-            </p>
+            <div dangerouslySetInnerHTML={{__html: defunt.description}}/>
         </div>
 
         <div className={`${styles.btns} ${modify ? styles.modify : null}`}>
@@ -45,14 +52,14 @@ function Cart_defunt({modify})
             {
                 modify 
                 ?
-                    <button className={styles.btn_edit}>Modifier</button>
+                    <button className={styles.btn_edit} onClick={() => handleActiveEditDefunt(defunt.id)}>Modifier</button>
                 : null
             }
         </div>
     </div>
-  );
+    );
 
-  return component;
+    return component;
 }
 
 export default Cart_defunt;
