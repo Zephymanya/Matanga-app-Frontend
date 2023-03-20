@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import styles from "../styles/contact.module.css";
+import { AiOutlineMail } from "react-icons/ai";
+import { FiPhoneCall } from "react-icons/fi";
+
 
 const contact = () => {
 
@@ -15,7 +18,7 @@ console.log(message);
       <div className={styles.contact_content}>
         <div className={styles.contact}>
           <div className={styles.contentTitleCont}>
-            <p className={styles.TitleContact}>Contact</p>
+            <p className={styles.TitleContact}>Contactez nous</p>
           </div>
 
           <div className={styles.contentInputText}>
@@ -29,8 +32,16 @@ console.log(message);
 
             <div className={styles.contact_phone}>
               <p className={styles.title_column}>CONTACT</p>
+              
+              <div className={styles.mails} >
+              <AiOutlineMail size={20} className={styles.icons} />
               <p className={styles.paragraphe}> contact@matanga-app.com</p>
-              <p className={styles.paragraphe}>+243 821 234 567</p>
+              </div>
+            <div className={styles.mails}>
+            <FiPhoneCall size={20} className={styles.icons}/>
+                 <p className={styles.paragraphe}>+243 821 234 567</p>
+            </div>
+           
             </div>
 
             <div className={styles.content_input_contact}>
