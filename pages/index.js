@@ -184,17 +184,22 @@ function Home({defunts})
             </button>
           </div>
         </div>
+        
+        {
+          defunts.lenght
+          ?
+            <div className={styles.Deceased_person}>
+              <h2 className={styles.title_page}>
+                <span>Personnes récement décédées</span>
+                <i></i>
+              </h2>
 
-        <div className={styles.Deceased_person}>
-          <h2 className={styles.title_page}>
-            <span>Personnes récement décédées</span>
-            <i></i>
-          </h2>
-
-          <div>
-            <Slider tab={defunts} />
-          </div>
-        </div>
+              <div>
+                <Slider tab={defunts} />
+              </div>
+            </div>
+          :null
+        }
       </div>
     </div>
   );
@@ -216,7 +221,7 @@ export async function getServerSideProps({req, res})
       }
     })
 
-    defunts = dataDefunts.data.data
+    if(dataDefunts.data.data) defunts = dataDefunts.data.data
   } 
   catch(err) 
   {

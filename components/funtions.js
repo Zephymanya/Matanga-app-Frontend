@@ -20,5 +20,21 @@ export const configAuthHeaderServer = (token) =>
 }
 
 
+export const configAuthHeaderParamServer = (token,param) => 
+{
+    const value =
+    {
+      headers:{
+        "Content-Type" : "application/json",
+        "Authorization": token,
+      },
+      params:{
+        param
+      }
+    }
+
+    return value
+}
+
 export const numberData = 2,
              numberDataHome = 12

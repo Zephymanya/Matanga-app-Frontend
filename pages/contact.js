@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/contact.module.css";
 
 const contact = () => {
+
+const [name, setName]= useState();
+const [email, setEmail]=useState();
+const [message, setMessage]=useState();
+
+console.log(message);
+
+
   const RenduContact = (
     <>
       <div className={styles.contact_content}>
@@ -26,9 +34,9 @@ const contact = () => {
             </div>
 
             <div className={styles.content_input_contact}>
-              <input type={"text"} placeholder="Nom" />
-              <input type={"text"} placeholder="Email" />
-              <textarea placeholder="Message" />
+              <input type={"text"} placeholder="Nom" onChange={(e)=>setName(e.target.value)}/>
+              <input type={"text"} placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
+              <textarea placeholder="Message" onChange={(e)=>setMessage(e.target.value)} />
               <div className={styles.btn_nvoi_input}>
                 <button className={styles.btn_envoi}>Envoyer</button>
               </div>

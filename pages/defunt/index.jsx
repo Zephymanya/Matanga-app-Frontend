@@ -1,19 +1,19 @@
 import Cookies from "js-cookie"
 import Head from "next/head"
 import { useContext, useEffect, useState } from "react"
-import CardsList from "../components/partials/_CardsList"
-import Modal from "../components/partials/_Modal"
-import SeeMore from "../components/partials/_SeeMore"
-import SortingSystem from "../components/partials/_SortingSystem"
-import { dataContext } from "../contexts/dataContext"
-import styles from "../styles/cimetiere.module.css"
-import { rooter } from "../datas/web"
+import CardsList from "../../components/partials/_CardsList"
+import Modal from "../../components/partials/_Modal"
+import SeeMore from "../../components/partials/_SeeMore"
+import SortingSystem from "../../components/partials/_SortingSystem"
+import { dataContext } from "../../contexts/dataContext"
+import styles from "../../styles/cimetiere.module.css"
+import { rooter } from "../../datas/web"
 import axios from "axios"
-import { routeApi } from "../datas/webApi"
-import { configAuthHeaderServer, numberData } from "../components/funtions"
+import { routeApi } from "../../datas/webApi"
+import { configAuthHeaderServer, numberData } from "../../components/funtions"
 
 
-function Defunt({cimetieres, defunts})
+function Defunt({cimetieres, defunts, onedefun})
 {
   const { 
     activeModalCreate, 
@@ -21,6 +21,10 @@ function Defunt({cimetieres, defunts})
     defuntUser,
     activeModalEdit  
   } = useContext(dataContext)
+
+  console.log(onedefun, "Samy tika makelele");
+
+  console.log(defuntUser, "Masta na lingi ba jeux te");
 
   const [numberView, setNumberView] = useState(numberData)
 
@@ -47,10 +51,11 @@ function Defunt({cimetieres, defunts})
       <SortingSystem 
         addBtn={true}
         data={{
-          cimetieres: cimetieres,
+          cimetieres,
           setDefunts: setDefuntUser,
           query: routeApi.search_all_user_defunt,
-          setNumberView: setNumberView 
+          setNumberView,
+          defunts: defuntUser
         }}
       />
 
@@ -92,6 +97,7 @@ export async function getServerSideProps({req, res})
   let cimetieres = []
   let defunts = null
 
+
   try 
   {
     const dataCimetieres = await axios.get(routeApi.get_cimetieres)
@@ -120,8 +126,10 @@ export async function getServerSideProps({req, res})
     console.error(err)
   }
 
+// ******************************************************
+
   return {
-    props: { cimetieres, defunts }
+    props: { cimetieres, defunts,}
   }
 }
 

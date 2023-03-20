@@ -31,9 +31,8 @@ function cimetiere({defunts, cimetieres})
         <i></i>
       </h2>
 
-
       {
-        defuntCimetieres
+        defuntCimetieres.length
         ?
           <>
             <SortingSystem 
@@ -42,7 +41,8 @@ function cimetiere({defunts, cimetieres})
               cimetieres: cimetieres,
               setDefunts: setDefuntCimetieres,
               query: routeApi.search_all_defunt,
-              setNumberView: setNumberView
+              setNumberView: setNumberView,
+              defunts: defuntCimetieres
             }}
           />
 

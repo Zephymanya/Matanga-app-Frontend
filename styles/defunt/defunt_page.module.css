@@ -1,0 +1,331 @@
+.content_defun {
+    width: 100%;
+    height: auto;
+}
+
+
+.content_defun .content_image_backgound{
+    position: relative;
+    width: 100%;
+    height:40vh;
+}
+
+.content_defun .content_defunt_information{
+    border:1px solid var(--border_grey);
+    border-radius: 5px;
+    margin-top:      
+    100px;
+    margin-left:5%;
+    position: absolute;
+    top: 0;
+    left: 0;  
+    width: 350px; ;
+    height:530px ;
+    z-index: 2; 
+} 
+
+.userImage {
+position: relative;
+width: 100% ;
+height:45vh ;
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+
+}
+
+.info_defunt{
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.image_defunt{
+width:100px ;
+height:100px ;
+}
+
+.descript{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.title_defunt{
+    height:35px;
+    display: flex;
+    align-items: center;
+ }
+ 
+ .title{
+    font-size: large;
+    font-weight: 500;
+ }
+
+.auther_info p{
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.auther_info{
+    height:20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.homage_Famille{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:18px;
+    width: 100%;
+    height:100px;
+    border: 1px solid var(--border_grey);
+    border-radius: 5px;
+    }
+
+.hommage_family{
+    font-size:large;
+    font-weight: 500;
+    color: var(--black_4);
+}
+
+.espace{
+width: 20%;
+}
+
+.content_commentaire{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    overflow:hidden;
+} 
+
+.scroll_class{
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+    padding-top: 10px;
+}
+
+.user
+{
+    position: relative;
+    border-radius: 50%;
+  
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.names_user
+{
+display: flex;
+gap: 5%;
+}
+
+.homage_commenetaire{
+    width: 68%;
+    height: 60vh;
+    display:flex;
+}
+
+.personne_commentaire{
+display: flex; 
+justify-content: space-between;
+}
+
+.personne_commentaire .user_image{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:20%;
+}
+
+.personne_commentaire .user_image p{
+font-size: smaller;  
+font-weight: bold;
+}
+
+.personne_commentaire .commentaire{
+    width:80%;
+    border-bottom: 1px solid var(--border_grey);
+}                  
+
+.personne_commentaire .commentaire .p_commentaire{
+   font-size:small;
+   font-weight: 200;
+   color: var(--black_6);
+}
+
+.date_commentaire{
+font-size: medium;
+font-weight:500;
+}
+.names_user_comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+ } 
+
+
+ .rendre_hommage{
+    margin-top: -0.5%;
+    display: flex;
+    padding-left:5%;
+    padding-right:5%;
+    height: 40px;
+ }
+
+ .input_hommage{
+display: flex;
+gap:3%;
+width: 80%;
+border: 1px solid var(--border_grey);
+border-radius: 5px;
+ }
+
+ .input_hommage input{
+    width:90%;
+    height: 100%;
+    border: none;
+  }
+
+  .input_hommage input::placeholder{
+  padding-left: 50%;
+  }
+
+.icons
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20%;
+}
+
+
+
+
+
+/* MEDIA QUERYS */
+
+
+@media all and (max-width: 991px) {
+ 
+    .image_defunt{
+        width:110px !important;
+        height:145px !important ;
+        margin-left:12% ;
+        border-radius: 5px;
+        }
+
+        .userImage {
+            width: 100% ;
+            height:90% ;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+    .content_defun .content_defunt_information
+{
+
+margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    height:30% ;
+    background-color: var(--white);
+    margin-left: 5%;
+    margin-top: 50%;
+} 
+
+.info_defunt
+{
+display: flex;
+flex-direction: column;
+}
+
+.title_defunt{
+   height:25px;
+   display: flex;
+   align-items: center;
+}
+
+.title_defunt p{
+font-size:14px;
+color: red;
+ }
+
+.description_defunt{
+     width:100%;
+}
+
+.descript{
+    font-size: 11px;
+    font-weight: 100;
+}
+
+.auther_info{
+ height:20px;
+ display: flex;
+ align-items: center;
+ font-size: 10px;
+ font-weight: 100;
+}
+
+.auther_info p{
+font-size:12px;
+   }
+   
+
+.content_commentaire{
+   margin-top: 33%;
+}
+.homage_commenetaire{
+    width: 100%;
+    height: 100%;
+}
+
+.espace{
+    display: none;
+}
+
+.input_hommage{
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+     }
+
+.personne_commentaire .user_image p{
+    font-size: 10px;  
+    font-weight: bold;
+    }
+    
+    .personne_commentaire .commentaire .p_commentaire{
+        font-size:10px;
+        font-weight: 200;
+        color: var(--black_6);
+     }
+     
+     .date_commentaire{
+     font-size: 10px;
+     margin-top: -1.5%;
+     }
+
+     .personne_commentaire{
+        display: flex; 
+        gap: 5%;
+        }
+        
+
+
+}

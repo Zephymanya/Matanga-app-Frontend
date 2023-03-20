@@ -8,7 +8,6 @@ import { TokenExpired } from "../funtions"
 import { useRouter } from "next/router"
 import { rooter } from "../../datas/web"
 import moment from "moment/moment"
-import { BiLoaderAlt } from "react-icons/bi"
 import Loader from "./_Loader"
 
 
@@ -122,32 +121,32 @@ function Modal({activeModal, cimetieres})
             setErrors(false)
         })
         .catch((err) => {
-            // if(err.code === "ERR_NETWORK")
-            // {
-            //     TokenExpired()
-            //     SetUserToken(null)
-            //     router.push(rooter.login.link)
-            // }
-            // else{
-            //     const error = err.response
+            if(err.code === "ERR_NETWORK")
+            {
+                TokenExpired()
+                SetUserToken(null)
+                router.push(rooter.login.link)
+            }
+            else{
+                const error = err.response
     
-            //     if(error.status === 498 || error.status === 500 && error.data.message === "The token has been blacklisted")
-            //     {
-            //         TokenExpired()
-            //         SetUserToken(null)
-            //         router.push(rooter.login.link)
-            //     }
-            //     else
-            //     {
-            //         if(err.response)
-            //         {
-            //             const dataErrors = JSON.parse(err.response.data.data)
+                if(error.status === 498 || error.status === 500 && error.data.message === "The token has been blacklisted")
+                {
+                    TokenExpired()
+                    SetUserToken(null)
+                    router.push(rooter.login.link)
+                }
+                else
+                {
+                    if(err.response)
+                    {
+                        const dataErrors = JSON.parse(err.response.data.data)
     
-            //             dataErrors ? setErrors(dataErrors) : setErrors(null)
-            //             setLoader(false)
-            //         }
-            //     }
-            // }
+                        dataErrors ? setErrors(dataErrors) : setErrors(null)
+                        setLoader(false)
+                    }
+                }
+            }
         })
     }
 
@@ -456,8 +455,8 @@ function Modal({activeModal, cimetieres})
                                     required
                                 >
                                     <option disabled selected={activeModalEdit ? false : true}>Choisissez le sexe du défunt</option>
-                                    <option defaultValue={"homme"} selected={activeModalEdit ? sexe === "homme"  ? true : false : false}>Homme</option>
-                                    <option defaultValue={"femme"} selected={activeModalEdit ? sexe === "femme"  ? true : false : false}>Femme</option>
+                                    <option value={"homme"} selected={activeModalEdit ? sexe === "homme"  ? true : false : false}>Homme</option>
+                                    <option value={"femme"} selected={activeModalEdit ? sexe === "femme"  ? true : false : false}>Femme</option>
                                 </select>
 
                                 {
