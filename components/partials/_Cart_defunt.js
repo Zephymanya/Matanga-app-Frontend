@@ -5,9 +5,12 @@ import { htmlPrefilter } from "jquery";
 import { HtmlContext } from "next/dist/shared/lib/html-context";
 import { dataContext } from "../../contexts/dataContext";
 import { useContext } from "react";
+import { rooter } from "../../datas/web";
 
 function Cart_defunt({modify, defunt}) 
 {
+    
+
     function handleActiveEditDefunt(id)
     {
         setActiveModalCreate(true) 
@@ -47,7 +50,7 @@ function Cart_defunt({modify, defunt})
         </div>
 
         <div className={`${styles.btns} ${modify ? styles.modify : null}`}>
-            <Link href={""} className={styles.btn_link}>Voir plus</Link>
+            <Link href={`${rooter.defunt.link}/${defunt.nom}`} className={styles.btn_link}>Voir plus</Link>
 
             {
                 modify 

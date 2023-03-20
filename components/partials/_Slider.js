@@ -45,11 +45,16 @@ function Slider({ tab }) {
 
   const component = (
     <>
-      <OwlCarousel className="owl-theme" {...owl_options}>
-        {tab.map((defunt) => (
-          <Cart_defunt key={defunt.id} defunt={defunt} />
-        ))}
-      </OwlCarousel>
+      {
+        tab
+        ?
+          <OwlCarousel className="owl-theme" {...owl_options}>
+            {tab.map((defunt) => (
+              <Cart_defunt key={defunt.id} defunt={defunt} />
+            ))}
+          </OwlCarousel>
+        :null
+      }
     </>
   );
   return component;

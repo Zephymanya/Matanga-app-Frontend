@@ -8,6 +8,7 @@
   padding-bottom: 50px;
   padding-left: 10%;
   padding-right: 10%;
+
 }
 
 .contact {
@@ -15,7 +16,7 @@
   height: 440px;
   background-color: var(--blue_f);
   border-radius: 5px;
-  margin-top: -1%;
+  margin-top: -1%; 
 }
 
 .contentTitleCont {
@@ -30,7 +31,7 @@
   font-weight: 600;
 }
 
-.contectInputText {
+.contentInputText {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -75,11 +76,16 @@
   width: 498.52px;
   height: 35px;
   background-color: var(--blue_f);
-  border: 2px solid var(--white_3);
+  border: 1px solid var(--white_3);
   border-radius: 5px;
   color: var(--white_6);
   outline: none;
 }
+
+.content_input_contact input ::focus {
+  border: 1px solid red;
+}
+
 
 .content_input_contact input ::placeholder {
   font-size: 15px;
@@ -91,7 +97,7 @@
   width: 498.52px;
   height: 127px;
   background-color: var(--blue_f);
-  border: 2px solid var(--white_3);
+  border:1px solid var(--white_3);
   border-radius: 5px;
   color: var(--white_6);
   outline: none;
@@ -105,7 +111,7 @@
 
 .btn_envoi {
   cursor: pointer;
-  width: 101.74px;
+  width: 151.74px;
   height: 35px;
   border-radius: 5px;
   background-color: var(--orange_c);

@@ -49,7 +49,7 @@ function SortingSystem({ addBtn, data })
     })
     req.catch((err) => console.error(err))
   }
-
+// console.log("defunts", data.defunts);
   const { 
     setActiveModalCreate, 
     userToken,
@@ -63,29 +63,35 @@ function SortingSystem({ addBtn, data })
       <div
         className={`${styles.Sorting} ${!addBtn ? styles.from_center : null}`}
       >
-        <form className={styles.form}>
-          <input
-            type={"text"}
-            className={styles.input_search}
-            placeholder={"Qui cherchez-vous?"}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+        {
+          data.defunts
+          ?
+            <form className={styles.form}>
+              <input
+                type={"text"}
+                className={styles.input_search}
+                placeholder={"Qui cherchez-vous?"}
+                onChange={(e) => setSearch(e.target.value)}
+              />
 
-          <select className={styles.select_list} onChange={(e) => setCimetiere(e.target.value)}>
-            <option disabled selected>Veuillez sélectionner un cimetière</option>
-            <option defaultValue={0}>Tous sélectionner</option>
-            {
-              data.cimetieres.map((cimetiere) => [
-                <option defaultValue={cimetiere.id}>{cimetiere.nom}</option>
-              ])
-            }
-          </select>
+              <select className={styles.select_list} onChange={(e) => setCimetiere(e.target.value)}>
+                <option disabled selected>Veuillez sélectionner un cimetière</option>
+                <option defaultValue={0}>Tous sélectionner</option>
+                {
+                  data.cimetieres.map((cimetiere) => [
+                    <option defaultValue={cimetiere.id}>{cimetiere.nom}</option>
+                  ])
+                }
+              </select>
 
-          <button className={styles.submit_btn} onClick={(e) => handleSorting(e)}>
-            <span className={styles.txt}>Chercher</span>
-            <RiSearch2Line className={styles.icon} title={"Rechercher"}/>
-          </button>
-        </form>
+              <button className={styles.submit_btn} onClick={(e) => handleSorting(e)}>
+                <span className={styles.txt}>Chercher</span>
+                <RiSearch2Line className={styles.icon} title={"Rechercher"}/>
+              </button>
+            </form>
+          : 
+            <div></div>
+        }
 
         {
           addBtn 

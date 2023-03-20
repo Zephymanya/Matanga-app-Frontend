@@ -3,10 +3,13 @@ import Cart_defunt from "./_Cart_defunt"
 
 function CardsList({modify, tab, view}) 
 {
+
+console.log("tab");
     const component = 
     <>
         <div className={`${tab ? styles.List : styles.List_vide}`}>
             {
+               
                 tab 
                 ?
                     tab.slice(0, view).map((defunt) => [
