@@ -32,41 +32,41 @@ function cimetiere({defunts, cimetieres})
       </h2>
 
       {
-        defuntCimetieres.length
-        ?
-          <>
-            <SortingSystem 
-            addBtn={false} 
-            data={{
-              cimetieres: cimetieres,
-              setDefunts: setDefuntCimetieres,
-              query: routeApi.search_all_defunt,
-              setNumberView: setNumberView,
-              defunts: defuntCimetieres
-            }}
-          />
+          defuntCimetieres
+          ?
+            <>
+              <SortingSystem 
+              addBtn={false} 
+              data={{
+                cimetieres: cimetieres,
+                setDefunts: setDefuntCimetieres,
+                query: routeApi.search_all_defunt,
+                setNumberView: setNumberView,
+                defunts: defuntCimetieres
+              }}
+            />
 
-          <CardsList 
-            tab={defuntCimetieres} 
-            view={numberView}
-          />
+            <CardsList 
+              tab={defuntCimetieres} 
+              view={numberView}
+            />
 
-          {
-            defuntCimetieres
-            ?
-              <SeeMore 
-                text={"défunt"} 
-                number={{
-                  numberView: numberView, 
-                  total: defuntCimetieres.length,
-                  setNumberView: setNumberView
-                }}
-              />
-            :null
-          }
-          </>
-        :
-          <h2 className={styles.not_defunt}>Aucun défunt trouvé</h2>
+            {
+              defuntCimetieres
+              ?
+                <SeeMore 
+                  text={"défunt"} 
+                  number={{
+                    numberView: numberView, 
+                    total: defuntCimetieres.length,
+                    setNumberView: setNumberView
+                  }}
+                />
+              :null
+            }
+            </>
+          :
+            <h2 className={styles.not_defunt}>Aucun défunt trouvé</h2>
       }
     </div>
   </>

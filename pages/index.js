@@ -186,7 +186,7 @@ function Home({defunts})
         </div>
         
         {
-          defunts.lenght
+          defunts.length
           ?
             <div className={styles.Deceased_person}>
               <h2 className={styles.title_page}>

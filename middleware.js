@@ -24,5 +24,5 @@ export function middleware(req)
 
 export const config = 
 {
-    matcher: ["/defunt", "/defunt/:path*", "/connexion", "/inscription"]
+    matcher: ["/defunt", "/connexion", "/inscription"]
 }

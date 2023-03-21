@@ -1,5 +1,5 @@
 import styles from "../styles/footer.module.css";
-import logo from "../public/favicon.ico";
+import logo from "../public/img/logo-2.png";
 import Image from "next/image";
 import { rooter } from "../datas/web";
 import Link from "next/link";

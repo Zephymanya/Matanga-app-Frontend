@@ -22,9 +22,6 @@ function Defunt({cimetieres, defunts, onedefun})
     activeModalEdit  
   } = useContext(dataContext)
 
-  console.log(onedefun, "Samy tika makelele");
-
-  console.log(defuntUser, "Masta na lingi ba jeux te");
 
   const [numberView, setNumberView] = useState(numberData)
 
@@ -129,7 +126,7 @@ export async function getServerSideProps({req, res})
 // ******************************************************
 
   return {
-    props: { cimetieres, defunts,}
+    props: { cimetieres, defunts }
   }
 }
 
