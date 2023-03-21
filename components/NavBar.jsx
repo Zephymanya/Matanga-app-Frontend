@@ -201,7 +201,7 @@ function NavBar()
                         </Link>
                       </div>
                       <div className={styles.linkOne}>
-                        <Link href={""} className={styles.link} onClick={closeMenu}>
+                        <Link href={rooter.user.link} className={styles.link} onClick={closeMenu}>
                           <FaUserEdit className={styles.icon} />
                           Modifier mon compte
                         </Link>

@@ -31,6 +31,10 @@ export const rooter = {
     name: "Mes défunts",
     link: "/defunt",
   },
+  user: {
+    name: "User modify",
+    link: "/usermodify",
+  },
   samy: {
     name: "FlyTs",
     link: "https://samytshibanda.com/",
