@@ -1,0 +1,291 @@
+.Modal
+{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+}
+
+.Modal .bloc
+{
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    color: var(--blue_f);
+}
+
+.Modal .bloc .top
+{
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Modal .bloc .top h3
+{
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.Modal .bloc .top h3 span
+{
+    margin-left: 8px;
+    color: var(--orange_c);
+    text-transform: capitalize;
+}
+
+.Modal .bloc .top .btn_close_modal
+{
+    border: none;
+    padding: 0;
+    background: none;
+
+    transform: rotate(45deg);
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--blue_f_6);
+
+    transition: .3s ease-in-out;
+}
+.Modal .bloc .top .btn_close_modal:hover
+{
+    color: var(--orange_c);
+}
+
+.Modal .bloc .content
+{
+    height: calc(100% - 50px - 70px);
+    padding: 10px 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Modal .bloc .content .img_bloc
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal .bloc .content .img_bloc input
+{
+    display: none;
+}
+
+.Modal .bloc .content .img_bloc .img
+{
+    border: 3px solid var(--border_grey);
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: var(--blue_f_6);
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Modal .bloc .content .img_bloc .errorImg
+{
+    border: 3px solid var(--error_border);
+    color: var(--error_txt);
+    font-style: italic;
+}
+.Modal .bloc .content .img_bloc .error
+{
+    border: 3px solid var(--error_border);
+    color: var(--error_txt);
+    font-style: italic;
+}
+
+.Modal .bloc .content .form
+{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.Modal .bloc .content .form .tree_inputs
+{
+    width: 100%;
+    padding-top: 20px;
+      display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.Modal .bloc .content .form .two_inputs
+{
+    width: 100%;
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.Modal .bloc .content .form .tree_inputs .input,
+.Modal .bloc .content .form .two_inputs .input
+{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.Modal .bloc .content .form .tree_inputs label,
+.Modal .bloc .content .form .two_inputs label,
+.Modal .bloc .content .form .one_input label
+{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.Modal .bloc .content .form .tree_inputs input,
+.Modal .bloc .content .form .two_inputs input,
+.Modal .bloc .content .form .one_input select,
+.Modal .bloc .content .form .two_inputs select
+{
+    background: none;
+    border: 1px solid var(--border_grey);
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+
+    transition: .3s ease-in-out;
+}
+.Modal .bloc .content .form .tree_inputs input:focus,
+.Modal .bloc .content .form .two_inputs input:focus,
+.Modal .bloc .content .form .one_input select:focus,
+.Modal .bloc .content .form .two_inputs select:focus
+{
+    border: 1px solid var(--orange_c);
+}
+
+.Modal .bloc .content .form .one_input
+{
+    width: 100%;
+    margin: 20px 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.Modal .bloc .bottom
+{
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal .bloc .bottom button
+{
+    border: 2px solid var(--blue_f);
+    background-color: var(--blue_f);
+    color: var(--orange_c);
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+
+    transition: .3s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Modal .bloc .bottom button .icon
+{
+  margin-left: 10px;
+  font-size: 18px;
+  transform: rotate(0deg);
+
+  animation: loader 1s ease-in-out infinite;
+}
+@keyframes loader 
+{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+.form .error
+{
+  border: 1px solid var(--red_border) !important;
+}
+.form .error:focus
+{
+  border: 1px solid var(--red_border) !important;
+}
+
+.errors
+{
+  color: var(--red_border);
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 5px;
+  text-transform: lowercase;
+}
+
+
+/**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+    .Modal .bloc .content .form .tree_inputs
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }  
+}
+
+/**-- Ecran(<771px) --**/
+@media all and (max-width: 771px) 
+{ 
+    .Modal .bloc .content .form .two_inputs
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }  
+}
+
+
+/**-- Ecran(<1500px) --**/
+@media all and (min-width: 1500px) 
+{    
+  .Cimetiere
+  {
+    padding: 0 20%;
+  }
+}
