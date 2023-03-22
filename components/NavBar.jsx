@@ -137,10 +137,10 @@ function NavBar()
               </div>
             ) : (
               <div className={styles.btns}>
-                <Link href={rooter.login.link} className={styles.btn_login}>
+                <Link href={rooter.login.link} className={styles.btn_login} onClick={handleCloseMenu}>
                   {rooter.login.name}
                 </Link>
-                <Link href={rooter.register.link} className={styles.btn_register}>
+                <Link href={rooter.register.link} className={styles.btn_register} onClick={handleCloseMenu}>
                   {rooter.register.name}
                 </Link>
               </div>

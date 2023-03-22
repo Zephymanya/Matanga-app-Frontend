@@ -11,7 +11,7 @@ import moment from "moment/moment"
 
  
 
-function Modal() 
+function Edit_account() 
 {
     
     function handleSelectImage()
@@ -209,14 +209,14 @@ function Modal()
                      
                         <div className={styles.tree_inputs}>
                             <div className={styles.input}>
-                                <label htmlFor="passwordlater">Ancien mot de passe</label>
+                                <label htmlFor="OldPassword">Ancien mot de passe</label>
                                 <input 
                                     type="password" 
                                     onChange={(e) => setDateNaissance(e.target.value)} 
-                                    id="passwordlater" 
+                                    id="OldPassword" 
                                     className={`${errors ? errors.date_naissance ? styles.error : null : null}`}
+                                    placeholder="*********"
                                     required
-                                  value={""}
                                 />
                                 {
                                     errors
@@ -234,12 +234,12 @@ function Modal()
                             <div className={styles.input}>
                                 <label htmlFor="passwordnew">Nouveau mot de passe</label>
                                 <input 
-                                    type="email" 
+                                    type="password" 
                                     onChange={(e) => setDateMort(e.target.value)} 
                                     id="passwordnew" 
                                     className={`${errors ? errors.date_deces ? styles.error : null : null}`}
                                     required
-                                  value={""}
+                                    placeholder="*********"
                                 />
 
                                 {
@@ -264,6 +264,7 @@ function Modal()
                                     className={`${errors ? errors.date_enterrement ? styles.error : null : null}`}
                                     required
                                     value={""}
+                                    placeholder="Confirmer votre mot de passe"
                                 />
 
                                 {
@@ -303,4 +304,4 @@ function Modal()
     return component
 }
 
-export default Modal
+export default Edit_account

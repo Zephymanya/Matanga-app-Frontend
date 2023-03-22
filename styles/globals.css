@@ -138,17 +138,23 @@ body {
 
 body
 {
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-
   box-sizing: border-box;
   color: var(--blue_f);
-  
-  min-height: 100vh;
+}
+
+#Site
+{
+  overflow-x: hidden;
+  width: 100%;
+	min-height: 100vh;
 
   display: flex;
   flex-direction: column;
+}
+
+main
+{
+  flex: 1;
 }
 
 a {

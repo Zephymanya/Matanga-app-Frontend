@@ -147,7 +147,15 @@
 
 
 /**-- #FIN Ecran(<771px) --**/
-@media all and (max-width: 771px) {
+@media all and (max-width: 771px) 
+{
+  .Content .bloc .inputs
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
 }
 
 

@@ -3,7 +3,6 @@
   position: relative;
   background-color: var(--blue_f);
   padding: 30px 5%;
-  margin-top: auto;
 
   display: flex;
   flex-direction: column;
