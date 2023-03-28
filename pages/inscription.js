@@ -9,6 +9,7 @@ import { BiLoaderAlt } from "react-icons/bi"
 import { useRouter } from "next/router";
 import Cookies from "js-cookie";
 import { dataContext } from "../contexts/dataContext";
+import { head } from "../datas/webHead";
 
 function Inscription() 
 {
@@ -75,8 +76,8 @@ function Inscription()
   const RenduInscription = (
     <>
       <Head>
-        <meta name="description" content={`Inscrivez-vous sur ${process.env.NEXT_PUBLIC_NAME_SITE} pour accéder à plus des fonctionnalitées`} />
-        <title>{ `${rooter.register.name} | ${process.env.NEXT_PUBLIC_NAME_SITE}` }</title>
+        <meta name="description" content={head.register.description} />
+        <title>{head.register.title}</title>
       </Head>
 
 

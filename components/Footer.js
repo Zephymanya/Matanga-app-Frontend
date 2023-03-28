@@ -10,7 +10,9 @@ function Footer() {
   const component = (
     <>
       <footer className={styles.Footer}>
-        <Image src={logo} alt={"Logo Matanga"} className={styles.logo}/>
+        <Link href={rooter.home.link}>
+          <Image src={logo} alt={"Logo Matanga"} className={styles.logo}/>
+        </Link>
 
         <div className={styles.links}>
           <Link href={rooter.cimetiere.link} className={styles.link}>{rooter.cimetiere.name}</Link>

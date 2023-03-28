@@ -1,19 +1,19 @@
 import axios from "axios"
 import React,{ useContext, useEffect, useRef, useState } from "react"
-import { FiPlus } from "react-icons/fi"
 import { dataContext } from "../contexts/dataContext"
 import styles from "../styles/usermodify.module.css"
 import { routeApi } from "../datas/webApi"
 import { TokenExpired } from "../components/funtions"
-import { useRouter } from "next/router"
 import { rooter } from "../datas/web"
-import moment from "moment/moment"
+import { BiLoaderAlt } from "react-icons/bi"
+import { useRouter } from "next/router"
+import Cookies from "js-cookie"
+import Head from "next/head"
 
  
 
 function Edit_account() 
 {
-    
     function handleSelectImage()
     {
         img.current.click()
@@ -49,49 +49,127 @@ function Edit_account()
         }
     }
 
-    function closeModal()
+    function handleEditUser()
     {
-        setActiveModalEdit(false)
-        setActiveModalCreate(false)
-        setDefuntId(false)
-        content_modal.current.scrollTop = 0 
+        setLoader(true)
+
+        const formData = new FormData()
+              formData.append("avatar", oldAvatar === selectedImg ? false : avatar)
+              formData.append("nom", nom)
+              formData.append("prenom", prenom)
+              formData.append("postnom", postNom)
+              formData.append("ancien_mot_de_passe", oldPassword)
+              formData.append("nouveau_mot_de_passe", newPassword)
+              formData.append("password_confirmation", confirmPassword)
+
+        axios.post(
+            routeApi.edit_account,
+            formData,
+            configAuthFormDataHeader
+        )
+        .then((res) => {
+            const response = res.data.data
+
+            if(response)
+            {
+                Cookies.set("user", JSON.stringify(response), { expires: 7 })
+
+                setSelectedImg(response.avatar)
+                setAvatar(response.avatar)
+                setNom(response.nom)
+                setPrenom(response.prenom)
+                setPostNom(response.postnom)
+
+                SetUserToken("")
+
+                setLoader(false)
+                setErrors(null)
+
+                setOldPassword("")
+                setNewPassword("")
+                setConfirmPassword("")
+            }
+        })
+        .catch((err) => {
+            if(err.code === "ERR_NETWORK")
+            {
+            }
+            else{
+                const error = err.response
+    
+                if(error.status === 498 || error.status === 500 && error.data.message === "The token has been blacklisted")
+                {
+                    TokenExpired()
+                    SetUserToken(null)
+                    router.push(rooter.login.link)
+                }
+                else
+                {
+                    if(error.data.data)
+                    {
+                        const dataErrors = JSON.parse(error.data.data)
+    
+                        dataErrors ? setErrors(dataErrors) : setErrors(null)
+                        setLoader(false)
+                    }
+                }
+            }
+        })
     }
 
 
     const [errors, setErrors] = useState(false),
-          [editorLoaded, setEditorLoaded] = useState(true),
-          [selectedImg, setSelectedImg]   = useState(null),
+          [loader, setLoader] = useState(false),
+          [selectedImg, setSelectedImg] = useState(null),
           [selectedImgError, setSelectedImgError]   = useState(false),
           [avatar, setAvatar] = useState(null),
+          [oldAvatar, setOldAvatar] = useState(null),
           [nom, setNom] = useState(""),
           [prenom, setPrenom] = useState(""),
           [postNom, setPostNom] = useState(""),
-          [sexe, setSexe] = useState(""),
-          [dateNaissance, setDateNaissance] = useState(""),
-          [dateMort, setDateMort] = useState(""),
-          [maisonFuneraire, setMaisonFuneraire] = useState(""),
-          [cimetiere, setCimetiere] = useState(""),
-          [dataHommageFamille, setDataHommageFamille] = useState(""),
-          [dataDescriptionDefunt, setDataDescriptionDefunt] = useState(""),
-          [dateEnterrement, setDateEnterrement] = useState(""),
-          [avatarEditNotChange, setAvatarEditNotChange] = useState(false)
+          [oldPassword, setOldPassword] = useState(""),
+          [newPassword, setNewPassword] = useState(""),
+          [confirmPassword, setConfirmPassword] = useState("")
 
 
-          const img           = useRef(),
-          editorRef     = useRef(),
-          content_modal = useRef()
+    const img = useRef()
+
+    const {
+        dataUser, setDataUser,
+        SetUserToken,
+        configAuthFormDataHeader
+    } = useContext(dataContext)
+
+    const router = useRouter()
+
+    useEffect(() => 
+    {
+        if(dataUser)
+        {
+            setSelectedImg(dataUser.avatar)
+            setOldAvatar(dataUser.avatar)
+            setNom(dataUser.nom)
+            setPrenom(dataUser.prenom)
+            setPostNom(dataUser.postnom)
+        }
+    }, [dataUser])
+
 
     const component = 
     <>
-    
-        <div className={styles.Modal  }>
-            <div className={styles.bloc}>
+        <Head>
+            <meta name="description" content={`Inscrivez-vous sur ${process.env.NEXT_PUBLIC_NAME_SITE} pour accéder à plus des fonctionnalitées`} />
+            <title>{ `${rooter.user.name} | ${process.env.NEXT_PUBLIC_NAME_SITE}` }</title>
+        </Head>
 
+
+        <div className={styles.Modal}>
+            <div className={styles.bloc}>
                 <div className={styles.top}>
-                <h3>Modifiez votre profil</h3>
+                    <h3>Modifiez votre profil</h3>
                 </div>
 
-                <div className={styles.content} ref={content_modal}>
+                <div className={styles.content}>
                     <div className={styles.img_bloc}>
                         <input type="file" 
                             className={styles.input_file} 
@@ -123,7 +201,8 @@ function Edit_account()
                                                 errors.avatar[0]
                                             : 
                                                 "L'avatar doit être un fichier de type JPEG, JPG ou PNG"
-                                        :null
+                                        :
+                                            "L'avatar doit être un fichier de type JPEG, JPG ou PNG"
                                 : null
                             }
                         </div>
@@ -140,7 +219,7 @@ function Edit_account()
                                     className={`${errors ? errors.nom ? styles.error : null : null}`}
                                     required
                                     placeholder="Tapez votre nom..."
-                                    // defaultValue={activeModalEdit ? nom ? nom : null : null}
+                                    value={nom}
                                 />
 
                                 {
@@ -165,7 +244,7 @@ function Edit_account()
                                     className={`${errors ? errors.prenom ? styles.error : null : null}`}
                                     placeholder="Tapez votre prénom..." 
                                     required
-                                    // defaultValue={activeModalEdit ? prenom ? prenom : null : null}
+                                    value={prenom}
                                 />
 
                                 {
@@ -190,7 +269,7 @@ function Edit_account()
                                     placeholder="Tapez votre postnom..." 
                                     className={`${errors ? errors.postnom ? styles.error : null : null}`}
                                     required
-                                    // defaultValue={activeModalEdit ? postNom ? postNom : null : null}
+                                    value={postNom}
                                 />
 
                                 {
@@ -206,25 +285,25 @@ function Edit_account()
                                 }
                             </div>
                         </div>
-                     
+                        
                         <div className={styles.tree_inputs}>
                             <div className={styles.input}>
                                 <label htmlFor="OldPassword">Ancien mot de passe</label>
                                 <input 
                                     type="password" 
-                                    onChange={(e) => setDateNaissance(e.target.value)} 
+                                    onChange={(e) => setOldPassword(e.target.value)} 
                                     id="OldPassword" 
-                                    className={`${errors ? errors.date_naissance ? styles.error : null : null}`}
+                                    className={`${errors ? errors.ancien_mot_de_passe ? styles.error : null : null}`}
                                     placeholder="*********"
                                     required
                                 />
                                 {
                                     errors
                                     ?
-                                        errors.date_naissance
+                                        errors.ancien_mot_de_passe
                                         ?
                                         <div className={styles.errors}>
-                                            <span>{errors.date_naissance[0]}</span>
+                                            <span>{errors.ancien_mot_de_passe[0]}</span>
                                         </div>
                                         : null
                                     :null
@@ -232,12 +311,12 @@ function Edit_account()
                             </div>
 
                             <div className={styles.input}>
-                                <label htmlFor="passwordnew">Nouveau mot de passe</label>
+                                <label htmlFor="NewPassword">Nouveau mot de passe</label>
                                 <input 
                                     type="password" 
-                                    onChange={(e) => setDateMort(e.target.value)} 
-                                    id="passwordnew" 
-                                    className={`${errors ? errors.date_deces ? styles.error : null : null}`}
+                                    onChange={(e) => setNewPassword(e.target.value)} 
+                                    id="NewPassword" 
+                                    className={`${errors ? errors.nouveau_mot_de_passe ? styles.error : null : null}`}
                                     required
                                     placeholder="*********"
                                 />
@@ -245,10 +324,10 @@ function Edit_account()
                                 {
                                     errors
                                     ?
-                                        errors.date_deces
+                                        errors.nouveau_mot_de_passe
                                         ?
                                         <div className={styles.errors}>
-                                            <span>{errors.date_deces[0]}</span>
+                                            <span>{errors.nouveau_mot_de_passe[0]}</span>
                                         </div>
                                         : null
                                     :null
@@ -256,49 +335,33 @@ function Edit_account()
                             </div>
 
                             <div className={styles.input}>
-                                <label htmlFor="pwdconfirm">Confirmer le mot de passe</label>
+                                <label htmlFor="Non" style={{visibility: "hidden"}}>Confirmer le mot de passe</label>
                                 <input 
                                     type="password" 
-                                    onChange={(e) => setDateEnterrement(e.target.value)} 
-                                    id="pwdconfirm" 
-                                    className={`${errors ? errors.date_enterrement ? styles.error : null : null}`}
+                                    onChange={(e) => setConfirmPassword(e.target.value)} 
+                                    className={`${errors ? errors.mot_de_passe_confirm ? styles.error : null : null}`}
                                     required
-                                    value={""}
                                     placeholder="Confirmer votre mot de passe"
                                 />
-
-                                {
-                                    errors
-                                    ?
-                                        errors.date_enterrement
-                                        ?
-                                        <div className={styles.errors}>
-                                            <span>{errors.date_enterrement[0]}</span>
-                                        </div>
-                                        : null
-                                    :null
-                                }
                             </div>
                         </div>
-                       
                     </div>
-                   
-                               </div>
-
-                <div className={styles.bottom}>
-                    
-                            <button onClick={"handleEditDefunt"} className={styles.btn_close_modal} title={"Modifier le defunt"}>
-                                Modifier
-                            </button>
-                        
                 </div>
 
-                
-            </div>
+                <div className={styles.bottom}>
+                    <button onClick={!loader ? handleEditUser : null} className={styles.btn_close_modal} title={"Modifier votre compte"}>
+                        <span>Modifier</span>
 
-            <div onClick={closeModal} className={styles.close_modal}></div>
+                        {
+                            loader
+                            ?
+                                <BiLoaderAlt className={styles.icon}/>
+                            : null
+                        }
+                    </button>   
+                </div>
+            </div>
         </div>
-    
     </>
 
     return component

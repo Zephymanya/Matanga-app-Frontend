@@ -25,7 +25,6 @@ export const routeApi = {
     search_all_defunt: `${linkApi}/api/search-all-defunt`,
     search_all_user_defunt: `${linkApi}/api/auth/search-all-user-defunt`,
 
-
     get_cimetieres: `${linkApi}/api/cimetieres`,
 
     logout:        `${linkApi}/api/auth/logout`,

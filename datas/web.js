@@ -3,42 +3,53 @@ export const rooter = {
     name: "Accueil",
     link: "/",
   },
+
   cimetiere: {
     name: "Cimetière",
     link: "/cimetiere",
   },
+
   about: {
     name: "À propos de nous",
     link: "/a-propos-de-nous",
   },
+
   contact: {
     name: "Nous contacter",
     link: "/contact",
   },
+
   privacy_policy: {
     name: "Politique de confidentialité",
     link: "/politique-de-confidentialite",
   },
+
   login: {
     name: "Connexion",
     link: "/connexion",
   },
+
   register: {
     name: "Inscription",
     link: "/inscription",
   },
+
   defunt: {
     name: "Mes défunts",
     link: "/defunt",
   },
+
   user: {
-    name: "User modify",
-    link: "/usermodify",
+    name: "Edit account",
+    link: "/edit-account",
   },
+
+
   samy: {
     name: "FlyTs",
     link: "https://samytshibanda.com/",
   },
+  
   manya: {
     name: "Manya",
     link: "/",

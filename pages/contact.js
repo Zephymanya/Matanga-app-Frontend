@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styles from "../styles/contact.module.css";
 import { AiOutlineMail } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
+import Head from "next/head";
+import { head } from "../datas/webHead";
 
 
 const contact = () => {
@@ -15,6 +17,11 @@ console.log(message);
 
   const RenduContact = (
     <>
+      <Head>
+        <meta name="description" content={head.contact.description} />
+        <title>{head.contact.title}</title>
+      </Head>
+
       <div className={styles.contact_content}>
         <div className={styles.contact}>
           <div className={styles.contentTitleCont}>

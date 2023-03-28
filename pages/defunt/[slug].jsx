@@ -14,6 +14,9 @@ import moment from "moment/moment";
 import { useRouter } from "next/router";
 import { rooter } from "../../datas/web";
 import { BiLoaderAlt } from "react-icons/bi";
+import { NextResponse } from "next/server"
+import { head } from "../../datas/webHead";
+import Head from "next/head";
 
 function Defunt_page({defunt, comments})
 {
@@ -438,6 +441,12 @@ function Defunt_page({defunt, comments})
 
   const component = 
   <div className={styles.Defunt}>
+    <Head>
+      <meta name="description" content={head.defunt_slug.description} />
+      <title>{`${defunt.nom} ${defunt.prenom} ${defunt.postnom} | ${head.defunt_slug.title}`}</title>
+    </Head>
+
+
     <div className={styles.banner} style={{backgroundImage: `url(${defunt.avatar})`}}>
       <div className={styles.bloc_details}>
         <div className={styles.img}>
@@ -609,7 +618,7 @@ function Defunt_page({defunt, comments})
 export async function getServerSideProps(context) 
 {
    const {slug} = context.params;
-   let defunt   = []
+   let defunt   = null
    let comments = []
 
   try  
@@ -645,9 +654,22 @@ export async function getServerSideProps(context)
   }
 
 
-  return {
-    props: {defunt, comments}
+  if(!defunt)
+  {
+    return {
+      redirect:{
+        permanent: false,
+        destination: "/cimetiere"
+      }
+    }
   }
+  else
+  {
+    return {
+      props: {defunt, comments}
+    }
+  }
+
   
 }
 
