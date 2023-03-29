@@ -8,6 +8,7 @@ import { dataContext } from "../contexts/dataContext";
 import { rooter } from "../datas/web";
 import Cookies from "js-cookie";
 import Head from "next/head";
+import { head } from "../datas/webHead";
 
 
 const connexion = () => {
@@ -58,8 +59,8 @@ const connexion = () => {
   const RenduConnexion = (
     <>
       <Head>
-        <meta name="description" content={`Connectez-vous sur ${process.env.NEXT_PUBLIC_NAME_SITE} pour accéder à plus des fonctionnalitées`} />
-        <title>{ `${rooter.login.name} | ${process.env.NEXT_PUBLIC_NAME_SITE}` }</title>
+        <meta name="description" content={head.login.description} />
+        <title>{head.login.title}</title>
       </Head>
 
 

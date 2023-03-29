@@ -19,9 +19,15 @@
   z-index: 10;
 }
 
+.My_menu
+{
+  background-color: var(--blue_f_7);
+  border-bottom: 1px solid var(--white_5);
+}
+
 .Other_menu {
   background-color: var(--blue_f);
-  border-bottom: 1px solid var(--white_7);
+  border-bottom: 1px solid var(--white_5);
 }
 
 .Nav .logo {
@@ -46,7 +52,7 @@
 }
 
 .Nav .menu .links {
-  color: var(--white_6);
+  color: var(--white_7);
 }
 
 .Nav .menu .links .link {

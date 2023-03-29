@@ -68,7 +68,7 @@ function Layout({ children }) {
         defuntId, setDefuntId,
       }}
     >
-      <div className={poppins.className}>
+      <div className={poppins.className} id={"Site"}>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="icon" href="/favicon.ico" />
@@ -76,7 +76,9 @@ function Layout({ children }) {
 
         <NavBar />
 
-        {children}
+        <main>
+          {children}
+        </main>
 
         <Footer />
       </div>

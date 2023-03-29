@@ -1,331 +1,394 @@
-.content_defun {
+.Defunt
+{
+    margin-top: 70px;
     width: 100%;
-    height: auto;
 }
 
-
-.content_defun .content_image_backgound{
+.Defunt .banner
+{
     position: relative;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
-    height:40vh;
+    height: 200px;
+    padding: 0 5%;
 }
 
-.content_defun .content_defunt_information{
-    border:1px solid var(--border_grey);
+.Defunt .banner .bloc_details
+{
+    position: absolute;
+    top: calc(200px / 3);
+
+    border: 1px solid var(--border_grey);
+    width: 350px;
     border-radius: 5px;
-    margin-top:      
-    100px;
-    margin-left:5%;
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+.Defunt .banner .filter
+{
     position: absolute;
     top: 0;
-    left: 0;  
-    width: 350px; ;
-    height:530px ;
-    z-index: 2; 
-} 
+    left: 0;
 
-.userImage {
-position: relative;
-width: 100% ;
-height:45vh ;
-border-top-right-radius: 5px;
-border-top-left-radius: 5px;
-
-}
-
-.info_defunt{
-padding-left: 5%;
-padding-right: 5%;
-}
-
-.image_defunt{
-width:100px ;
-height:100px ;
-}
-
-.descript{
-    font-size: 14px;
-    font-weight: 100;
-}
-
-.title_defunt{
-    height:35px;
-    display: flex;
-    align-items: center;
- }
- 
- .title{
-    font-size: large;
-    font-weight: 500;
- }
-
-.auther_info p{
-    font-size: 14px;
-    font-weight: 100;
-}
-
-.auther_info{
-    height:20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-
-.homage_Famille{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom:18px;
+    background-color: var(--blue_f_6);
     width: 100%;
-    height:100px;
-    border: 1px solid var(--border_grey);
-    border-radius: 5px;
-    }
-
-.hommage_family{
-    font-size:large;
-    font-weight: 500;
-    color: var(--black_4);
+    height: 100%;
 }
 
-.espace{
-width: 20%;
-}
-
-.content_commentaire{
-    display: flex;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
-    overflow:hidden;
-} 
-
-.scroll_class{
-    width: 100%;
-    height: 90%;
-    overflow-y: scroll;
-    padding-top: 10px;
-}
-
-.user
+.Defunt .banner .bloc_details .img
 {
     position: relative;
-    border-radius: 50%;
-  
-    width: 60px;
-    height: 60px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.names_user
-{
-display: flex;
-gap: 5%;
-}
-
-.homage_commenetaire{
-    width: 68%;
-    height: 60vh;
-    display:flex;
-}
-
-.personne_commentaire{
-display: flex; 
-justify-content: space-between;
-}
-
-.personne_commentaire .user_image{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width:20%;
-}
-
-.personne_commentaire .user_image p{
-font-size: smaller;  
-font-weight: bold;
-}
-
-.personne_commentaire .commentaire{
-    width:80%;
-    border-bottom: 1px solid var(--border_grey);
-}                  
-
-.personne_commentaire .commentaire .p_commentaire{
-   font-size:small;
-   font-weight: 200;
-   color: var(--black_6);
-}
-
-.date_commentaire{
-font-size: medium;
-font-weight:500;
-}
-.names_user_comment{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
- } 
-
-
- .rendre_hommage{
-    margin-top: -0.5%;
-    display: flex;
-    padding-left:5%;
-    padding-right:5%;
-    height: 40px;
- }
-
- .input_hommage{
-display: flex;
-gap:3%;
-width: 80%;
-border: 1px solid var(--border_grey);
-border-radius: 5px;
- }
-
- .input_hommage input{
-    width:90%;
-    height: 100%;
-    border: none;
-  }
-
-  .input_hommage input::placeholder{
-  padding-left: 50%;
-  }
-
-.icons
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:20%;
-}
-
-
-
-
-
-/* MEDIA QUERYS */
-
-
-@media all and (max-width: 991px) {
- 
-    .image_defunt{
-        width:110px !important;
-        height:145px !important ;
-        margin-left:12% ;
-        border-radius: 5px;
-        }
-
-        .userImage {
-            width: 100% ;
-            height:90% ;
-    
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            }
-
-    .content_defun .content_defunt_information
-{
-
-margin-left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:90%;
-    height:30% ;
-    background-color: var(--white);
-    margin-left: 5%;
-    margin-top: 50%;
-} 
-
-.info_defunt
-{
-display: flex;
-flex-direction: column;
-}
-
-.title_defunt{
-   height:25px;
-   display: flex;
-   align-items: center;
-}
-
-.title_defunt p{
-font-size:14px;
-color: red;
- }
-
-.description_defunt{
-     width:100%;
-}
-
-.descript{
-    font-size: 11px;
-    font-weight: 100;
-}
-
-.auther_info{
- height:20px;
- display: flex;
- align-items: center;
- font-size: 10px;
- font-weight: 100;
-}
-
-.auther_info p{
-font-size:12px;
-   }
-   
-
-.content_commentaire{
-   margin-top: 33%;
-}
-.homage_commenetaire{
     width: 100%;
-    height: 100%;
+    height: 200px;
 }
 
-.espace{
+.Defunt .banner .bloc_details .bloc_name
+{
+    width: calc(100%);
+    color: var(--blue_f_8);
+    text-align: center;
+    margin-top: 20px;
+
     display: none;
+    flex-direction: column;
+    align-items: center;
+
+    z-index: 2;
 }
 
-.input_hommage{
+.Defunt .banner .bloc_details .bloc_name strong
+{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.Defunt .banner .bloc_details .bloc_name span
+{
+    color: var(--orange_c);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+.Defunt .banner .bloc_details .describe
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 20px;
+    font-size: 14px;
+    color: var(--blue_f_6);
+    height: 100px;
+}
+
+.Defunt .banner .bloc_details .dates
+{
+    padding: 15px 20px;
+    font-size: 14px;
+    color: var(--blue_f_6);
+}
+
+.Defunt .banner .bloc_details .dates .date
+{
+    margin-top: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Defunt .banner .bloc_details .dates .date:first-child
+{
+    margin-top: 0;
+}
+
+.Defunt .banner .bloc_details .dates .date strong
+{
+    font-weight: normal;
+    color: var(--blue_f_9);
+}
+
+.Defunt .banner .name
+{
+    position: relative;
+    top: calc(200px / 3);
+    left: 350px;
+
+    width: calc(100% - 350px);
+    padding-left: 30px;
+    padding-top: 40px;
+    color: var(--white_8);
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 2;
+}
+
+.Defunt .banner .name strong
+{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.Defunt .banner .name span
+{
+    color: var(--orange_c);
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
+.Defunt .bloc_content
+{
+    position: relative;
+    padding: 30px 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.Defunt .bloc_content .hommage_comment
+{
+    width: calc(100% - 350px - 30px);
+}
+
+.Defunt .bloc_content .hommage
+{
+    color: var(--blue_f_6);
+    font-size: 14px;
+}
+
+
+.Defunt .bloc_content .comments
+{
+    margin-top: 30px;
+}
+
+
+.Defunt .bloc_content .add_comment
+{
+    margin-bottom: 30px;
+}
+
+.Defunt .bloc_content .add_comment h3
+{
+    color: var(--blue_f_9);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.Defunt .bloc_content .add_comment .btn
+{
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Defunt .bloc_content .add_comment .btn button
+{
+    border: 1px solid var(--blue_f_9);
+    background-color: var(--blue_f_9);
+    padding: 8px 10px;
+    border-radius: 5px;
+    color: var(--white_9);
+    cursor: pointer;
+  
+    transition: .3s ease-in-out;
+
+    display: flex;
+    align-items: center;
+}
+.Defunt .bloc_content .add_comment .btn button:hover {
+    border: 1px solid var(--blue_f_9);
+    color: var(--orange_c);
+}
+
+.Defunt .bloc_content .add_comment .btn button .icon
+{
+  margin-left: 10px;
+  font-size: 18px;
+  transform: rotate(0deg);
+
+  animation: loader 1s ease-in-out infinite;
+}
+@keyframes loader 
+{
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+
+.Defunt .bloc_content .see_comment
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.Defunt .bloc_content .see_comment .comment
+{
+    border: 1px solid var(--black_015);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.Defunt .bloc_content .see_comment .comment:last-child
+{
+    margin-bottom: 0;
+}
+
+.Defunt .bloc_content .see_comment .comment
+{
+    display: flex;
+}
+
+.Defunt .bloc_content .see_comment .comment .avatar
+{
+    position: relative;
+    border: 2px solid var(--black_2);
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.Defunt .bloc_content .see_comment .comment .avatar .img
+{
     width: 100%;
-    padding-left: 2%;
-    padding-right: 2%;
-     }
+    height: 100%;
+}
 
-.personne_commentaire .user_image p{
-    font-size: 10px;  
+.Defunt .bloc_content .see_comment .comment .comment_content
+{
+    width: 100%;
+}
+
+.Defunt .bloc_content .see_comment .comment .comment_content .top
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Defunt .bloc_content .see_comment .comment .comment_content .top .name
+{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.Defunt .bloc_content .see_comment .comment .comment_content .top .name span
+{
+    margin-right: 5px;
+}
+
+.Defunt .bloc_content .see_comment .comment .comment_content .top strong
+{
+    font-size: 13px;
+    font-weight: normal;
+    color: var(--blue_f_6);
+}
+
+.Defunt .bloc_content .see_comment .comment .comment_content .txt
+{
+    font-size: 14px;
+    color: var(--blue_f_6);
+    width: 100;
+    margin: 10px 0;
+}
+
+.Defunt .bloc_content .see_comment .comment .comment_content .bottom
+{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.Defunt .bloc_content .see_comment .comment .comment_content .bottom button
+{
+    border: none;
+    padding: 0;
+    background: none;
+    color: var(--error_txt);
     font-weight: bold;
-    }
+    cursor: pointer;
+}
+
+
+
+
+.Defunt .not_comment
+{
+    width: 100%;
+    height: 150px;
+}
+
+.errors
+{
+  color: var(--red_border);
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 5px;
+  text-transform: lowercase;
+}
+
+
+
+
+
+
+
+/** MEDIA QUERY **/
+    /**-- Ecran(<991px) --**/
+@media all and (max-width: 991px) 
+{
+
+    .Defunt .banner .bloc_details
+    {
+        position: relative;
+        top: calc(200px / 3);
     
-    .personne_commentaire .commentaire .p_commentaire{
-        font-size:10px;
-        font-weight: 200;
-        color: var(--black_6);
-     }
-     
-     .date_commentaire{
-     font-size: 10px;
-     margin-top: -1.5%;
-     }
+        border: 1px solid var(--border_grey);
+        width: 100%;
+        border-radius: 5px;
+        overflow: hidden;
+    }
 
-     .personne_commentaire{
-        display: flex; 
-        gap: 5%;
-        }
-        
+    .Defunt .banner .bloc_details .bloc_name
+    {
+        display: flex;
+    }
 
+
+    .Defunt .bloc_content
+    {
+        padding-top: 370px;
+    }
+
+    .Defunt .bloc_content .hommage_comment
+    {
+        width: calc(100%);
+    }
+
+    .Defunt .banner .name
+    {
+        display: none;
+    }
+}
+
+@media all and (max-width: 771px) 
+{
 
 }
+    /**-- #FIN Ecran(<991px) --**/

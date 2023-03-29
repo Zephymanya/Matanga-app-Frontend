@@ -1,4 +1,5 @@
 import axios from "axios"
+import Head from "next/head"
 import { useContext, useEffect, useState } from "react"
 import { numberData } from "../components/funtions"
 import CardsList from "../components/partials/_CardsList"
@@ -6,6 +7,7 @@ import SeeMore from "../components/partials/_SeeMore"
 import SortingSystem from "../components/partials/_SortingSystem"
 import { dataContext } from "../contexts/dataContext"
 import { routeApi } from "../datas/webApi"
+import { head } from "../datas/webHead"
 import styles from "../styles/cimetiere.module.css"
 
 
@@ -25,6 +27,11 @@ function cimetiere({defunts, cimetieres})
 
   const component = 
   <>
+    <Head>
+      <meta name="description" content={head.cimetiere.description} />
+      <title>{head.cimetiere.title}</title>
+    </Head>
+
     <div className={styles.Cimetiere}>
       <h2 className={styles.title_page}>
         <span>Notre cimetière</span>
@@ -32,41 +39,43 @@ function cimetiere({defunts, cimetieres})
       </h2>
 
       {
-        defuntCimetieres.length
-        ?
-          <>
-            <SortingSystem 
-            addBtn={false} 
-            data={{
-              cimetieres: cimetieres,
-              setDefunts: setDefuntCimetieres,
-              query: routeApi.search_all_defunt,
-              setNumberView: setNumberView,
-              defunts: defuntCimetieres
-            }}
-          />
+        <>
+          <SortingSystem 
+          addBtn={false} 
+          data={{
+            cimetieres: cimetieres,
+            setDefunts: setDefuntCimetieres,
+            query: routeApi.search_all_defunt,
+            setNumberView: setNumberView,
+            defunts: defuntCimetieres
+          }}
+        />
 
-          <CardsList 
-            tab={defuntCimetieres} 
-            view={numberView}
-          />
-
-          {
-            defuntCimetieres
+        {
+            defuntCimetieres.length
             ?
-              <SeeMore 
-                text={"défunt"} 
-                number={{
-                  numberView: numberView, 
-                  total: defuntCimetieres.length,
-                  setNumberView: setNumberView
-                }}
+              <CardsList 
+                tab={defuntCimetieres} 
+                view={numberView}
               />
-            :null
-          }
-          </>
-        :
-          <h2 className={styles.not_defunt}>Aucun défunt trouvé</h2>
+            :
+              <h2 className={styles.not_defunt}>Aucun défunt trouvé</h2>
+        }
+
+        {
+          defuntCimetieres.length
+          ?
+            <SeeMore 
+              text={"défunt"} 
+              number={{
+                numberView: numberView, 
+                total: defuntCimetieres.length,
+                setNumberView: setNumberView
+              }}
+            />
+          :null
+        }
+        </>
       }
     </div>
   </>

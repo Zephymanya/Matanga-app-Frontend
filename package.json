@@ -23,5 +23,9 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-owl-carousel": "^2.3.3"
+  },
+  "devDependencies": {
+    "@ckeditor/ckeditor5-alignment": "^36.0.1",
+    "@ckeditor/ckeditor5-image": "^36.0.1"
   }
 }

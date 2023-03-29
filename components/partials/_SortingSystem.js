@@ -44,7 +44,7 @@ function SortingSystem({ addBtn, data })
       }
       else
       {
-        data.setDefunts(null)
+        data.setDefunts([])
       }
     })
     req.catch((err) => console.error(err))

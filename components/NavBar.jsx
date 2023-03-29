@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "../styles/navbar.module.css";
-import logo from "../public/favicon.ico";
+import logo from "../public/img/logo-2.png";
 import Link from "next/link";
 import { rooter } from "../datas/web";
 import { FaBars, FaUserEdit } from "react-icons/fa";
@@ -14,7 +14,7 @@ import { IoLogOut } from "react-icons/io5";
 import { GiCoffin } from "react-icons/gi"
 import { dataContext } from "../contexts/dataContext";
 import axios from "axios";
-import { configHeader, routeApi } from "../datas/webApi";
+import { routeApi } from "../datas/webApi";
 import Cookies from "js-cookie";
 import Avatar from "./partials/_Avatar";
 
@@ -30,7 +30,9 @@ function NavBar()
 
   function handleLogout()
   {
-    axios.post(routeApi.logout, {}, configAuthHeader)
+    axios.post(routeApi.logout, {}, {
+      headers: configAuthHeader
+    })
     .then((res) => {
       if(res.data.success)
       {
@@ -80,8 +82,7 @@ function NavBar()
     {   
       const observer = new IntersectionObserver((entrie) => {
           const myEntrie = entrie[0];
-        
-          console.log(myEntrie.isIntersecting)
+      
         
       // console.log(nav.current.offsetParent.offsetHeight == 2478)
           // if (myEntrie.isIntersecting) observer.unobserve(myEntrie.target);
@@ -96,7 +97,7 @@ function NavBar()
     <div className={styles.parentBloc}>
       <nav
         className={`${styles.Nav} ${
-          asPath === "/" ? null : styles.Other_menu
+          asPath === "/" ? styles.My_menu : styles.Other_menu
         } ${activeMenu ? styles.Active_menu : null}`}
         ref={nav}
       >
@@ -136,10 +137,10 @@ function NavBar()
               </div>
             ) : (
               <div className={styles.btns}>
-                <Link href={rooter.login.link} className={styles.btn_login}>
+                <Link href={rooter.login.link} className={styles.btn_login} onClick={handleCloseMenu}>
                   {rooter.login.name}
                 </Link>
-                <Link href={rooter.register.link} className={styles.btn_register}>
+                <Link href={rooter.register.link} className={styles.btn_register} onClick={handleCloseMenu}>
                   {rooter.register.name}
                 </Link>
               </div>

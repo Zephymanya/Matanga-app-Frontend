@@ -1,4 +1,94 @@
 :root {
+	--red  : #d10f41;
+	--red_c: #ffd3da;
+	--red_f: #b71c1c;
+	--red_b: #e53935;
+
+	--pink:   #e91e63;
+	--pink_b: #d81b60;
+	--pink_c: #fce4ec;
+	--pink_f: #880e4f;
+
+	--purple:   #9c27b0;
+	--purple_c: #f3e5f5;
+	--purple_f: #4a148c;
+	--purple_b: #8e24aa;
+
+	--indigo:   #3f51b5;
+	--indigo_c: #e8eaf6;
+	--indigo_f: #1a237e;
+	--indigo_b: #3949ab;
+
+	--blue    : #2196f3;
+	--blue_c  : #e3f2fd;
+	--blue_f  : #5e35b1;
+	--blue_b  : #1e88e5;
+
+	--lightblue    : #03a9f4;
+	--lightblue_c  : #e1f5fe;
+	--lightblue_f  : #01579b;
+	--lightblue_b  : #039be5;
+
+	--cyan    : #00bcd4;
+	--cyan_c  : #e0f7fa;
+	--cyan_f  : #006064;
+	--cyan_b  : #00acc1;
+
+	--teal    : #009688;
+	--teal_c  : #e0f2f1;
+	--teal_f  : #004d40;
+	--teal_b  : #00897b;
+
+	--green    : #4caf50;
+	--green_c  : #d4f3d7;
+	--green_f  : #1b5e20;
+	--green_b  : #43a047;
+
+	--lightgreen    : #8bc34a;
+	--lightgreen_c  : #e4ffc5;
+	--lightgreen_f  : #33691e;
+	--lightgreen_b  : #7cb342;
+
+	--lime    : #cddc39;
+	--lime_c  : #f9fbe7;
+	--lime_f  : #827717;
+	--lime_b  : #c0ca33;
+
+	--yellow    : #ffeb3b;
+	--yellow_c  : #fffde7;
+	--yellow_f  : #ffd600;
+	--yellow_b  : #fdd835;
+
+	--amber    : #ffc107;
+	--amber_c  : #fff8e1;
+	--amber_f  : #ffab00;
+	--amber_b  : #ffb300;
+
+	--orange    : #ff9800;
+	--orange_c  : #ffedd1;
+	--orange_f  : rgb(209, 15, 65);
+	--orange_b  : #fb8c00;
+
+	--deeporange    : #ff5722;
+	--deeporange_c  : #fbe9e7;
+	--deeporange_f  : #bf360c;
+	--deeporange_b  : #f4511e;
+
+	--brown    : #795548;
+	--brown_c  : #efebe9;
+	--brown_f  : #3e2723;
+	--brown_b  : #6d4c41;
+
+	--grey    : #9e9e9e;
+	--grey_2  : #e7e7e7;
+	--grey_c  : #fafafa;
+	--grey_f  : #212121;
+	--grey_b  : #757575;
+
+	--bluegrey    : #607d8b;
+	--bluegrey_c  : #eceff1;
+	--bluegrey_f  : #263238;
+	--bluegrey_b  : #546e7a;
   --bg-color: #ffffff;
   --orange_c: #ff8e00;
   --orange_f: #ff5003;
@@ -48,17 +138,23 @@ body {
 
 body
 {
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-
   box-sizing: border-box;
   color: var(--blue_f);
-  
-  min-height: 100vh;
+}
+
+#Site
+{
+  overflow-x: hidden;
+  width: 100%;
+	min-height: 100vh;
 
   display: flex;
   flex-direction: column;
+}
+
+main
+{
+  flex: 1;
 }
 
 a {

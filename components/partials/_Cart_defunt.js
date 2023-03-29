@@ -30,7 +30,7 @@ function Cart_defunt({modify, defunt})
     <div className={styles.Cart}>
         <div className={styles.title}>
         <strong>{`${defunt.prenom} ${defunt.nom}`}</strong>
-        <span>{defunt.cimetiere}</span>
+        <span>{defunt.cimetiere.nom}</span>
         </div>
 
         <div className={styles.img_bloc}>
@@ -50,7 +50,7 @@ function Cart_defunt({modify, defunt})
         </div>
 
         <div className={`${styles.btns} ${modify ? styles.modify : null}`}>
-            <Link href={`${rooter.defunt.link}/${defunt.nom}`} className={styles.btn_link}>Voir plus</Link>
+            <Link href={`${rooter.defunt.link}/${defunt.slug}`} className={styles.btn_link}>Voir plus</Link>
 
             {
                 modify 

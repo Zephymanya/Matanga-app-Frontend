@@ -1,5 +1,5 @@
 import styles from "../styles/footer.module.css";
-import logo from "../public/favicon.ico";
+import logo from "../public/img/logo-2.png";
 import Image from "next/image";
 import { rooter } from "../datas/web";
 import Link from "next/link";
@@ -10,7 +10,9 @@ function Footer() {
   const component = (
     <>
       <footer className={styles.Footer}>
-        <Image src={logo} alt={"Logo Matanga"} className={styles.logo}/>
+        <Link href={rooter.home.link}>
+          <Image src={logo} alt={"Logo Matanga"} className={styles.logo}/>
+        </Link>
 
         <div className={styles.links}>
           <Link href={rooter.cimetiere.link} className={styles.link}>{rooter.cimetiere.name}</Link>
