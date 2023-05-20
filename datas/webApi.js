@@ -1,4 +1,4 @@
-const linkApi = "http://localhost:8001"
+const linkApi = "http://localhost:8000"
 
 export const routeApi = {
     login:         `${linkApi}/api/auth/login`,

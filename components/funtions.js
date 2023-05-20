@@ -36,5 +36,5 @@ export const configAuthHeaderParamServer = (token,param) =>
     return value
 }
 
-export const numberData = 2,
+export const numberData = 12,
              numberDataHome = 12

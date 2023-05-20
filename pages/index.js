@@ -80,9 +80,9 @@ function Home({defunts})
         />
 
         <div className={styles.textes_and_btn}>
-          <strong>Je ne saurai perdre ton amour</strong>
+          <strong>Merci de donner l'information aux générations futures</strong>
 
-          <span>Merci de donner les informations aux générations futures</span>
+          <span></span>
 
           { 
             userToken
@@ -131,11 +131,11 @@ function Home({defunts})
               ref={textAnimate}
             >
               <p>
-                Le lorem ipsum est, en imprimerie, une suite de mots sans
-                signification utilisée à titre provisoire pour calibrer une mise
-                en page, le texte définitif venant remplacer le faux-texte dès
-                qu'il est prêt ou que la mise en page est achevée. Généralement,
-                on utilise un texte en faux latin, le Lorem ipsum ou Lipsum.
+              Matanga App est une plateforme qui propose un cadre 
+              commémoratif d'un défunt de manière virtuelle. 
+              Au regard d'un quotidien parfois chargé, Matanga App 
+              s'offre en solution pour témoigner nos sentiments à l'égard de celle ou celui qui nous a été cher(e). Cette plateforme incarne
+              l'idée d'un cimetière virtuel. 
               </p>
 
               <Link href={rooter.about.link} className={styles.btn}>
@@ -191,7 +191,7 @@ function Home({defunts})
           ?
             <div className={styles.Deceased_person}>
               <h2 className={styles.title_page}>
-                <span>Personnes récement décédées</span>
+                <span>Personnes récemment décédées</span>
                 <i></i>
               </h2>
 

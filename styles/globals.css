@@ -90,8 +90,8 @@
 	--bluegrey_f  : #263238;
 	--bluegrey_b  : #546e7a;
   --bg-color: #ffffff;
-  --orange_c: #ff8e00;
-  --orange_f: #ff5003;
+  --orange_c: rgb(192, 129, 226);
+  --orange_f: rgb( 136 , 77 , 167);
   --blue_c: #3ea3d9;
   --blue_f: #000c19;
   --blue_f-menu: #021325;

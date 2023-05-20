@@ -92,7 +92,6 @@ function SortingSystem({ addBtn, data })
           : 
             <div></div>
         }
-
         {
           addBtn 
           ? 
